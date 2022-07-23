@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Gridea | czyouge</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1658542017495">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-202728855-1');
+</script>
+
+
+    <meta name="description" content="一个讲故事的人类">
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://czyouge.github.io">
+        <img src="https://czyouge.github.io/images/avatar.png?v=1658542017495" class="site-logo">
+        <h1 class="site-title">czyouge</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/myworks" class="site-nav">
+            作品
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/goodstuff" class="site-nav">
+            推荐
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      一个讲故事的人类
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: Gridea</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://czyouge.github.io/post/2107-Gridea/">
+                  <h2 class="post-title">用Gridea搭建博客竟如此简单</h2>
+                </a>
+                <div class="post-date">
+                  2021-07-20
+                </div>
+                <div class="post-abstract">
+                  <p>我曾在大学时试过用 WordPress 搭建博客，但其复杂程度超过了我的掌控能力，后来也反反复复多次使用过 GitHub Jekyll，但总觉得不好用，坚持不了几天。到后来，我就更愿意使用现成的博客服务平台了，比如新浪博客、网易 Lofter、简书等，但国内博客平台存在严重的审查问题，所以也始终不称意。然后我就开始用 Blogger，体验很差，但好在没了审查，所以也就忍受了几年。但如此却将我自己的故事挡在了墙外，常会让我感到遗憾。尽管我尝试使用 ZeroNet 来发布文章，但这个分布式网络可以说是一个鬼城，并没有几个真正严肃的真实用户。</p>
+<p>今天下午，我偶然在知乎上看到了一篇文章《<a href="https://zhuanlan.zhihu.com/p/165948546">完全小白教程：使用Github Pages和Gridea搭建个人博客</a>》，发现了 <a href="https://gridea.dev/">Gridea</a> 这个超简单的博客工具，简单了解了下发现这正是我需要的东西——简简单单就能免费创建一个能受自己控制且（几乎）不被审查的博客。<strong>真的非常简单！</strong></p>
+<p>下面我将分步骤描述我的创建和配置过程，其中包括注册配置 GitHub 代码库、下载配置 Gridea 客户端、选择合适的博客主题、绑定域名、配置谷歌分析、发布文章。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://czyouge.github.io/post/2107-Gridea/">
+                  <div class="feature-container" style="background-image: url('https://czyouge.github.io/post-images/Gridea.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
