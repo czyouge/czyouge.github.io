@@ -1,0 +1,283 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>SRC-20，你需要知道这些 | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    SRC-20，你需要知道这些
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-05-25 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/SRC-20/" class="post-tags">
+                            # SRC-20
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/blockchain/" class="post-tags">
+                            # 区块链
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/bitcoin/" class="post-tags">
+                            # 比特币
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>比特币的市值毫无疑问是加密货币的 No.1，但也存在自己的缺点，比如交易速度慢、成本高。不过，这些缺点并未妨碍开发者社区前赴后继地为扩大其生态而努力，并接连创造了 Ordinals、Runes、Stamps、Atomicals 等协议，并进而出现了 BRC-20、ARC-20、Runes 以及本文要介绍的 SRC-20 代币标准。</p>
+<p>但在深入介绍 SRC-20 之前，我会首先做一些语言学上的探讨，解释一下 SRC-20 名称以及一些相关术语的由来或含义。之后我会详细说明 SRC-20 标准的细节以及其上生态的发展情况。</p>
+<!-- more -->
+<p><strong>例行说明：本文并非投资建议，请审慎判断。</strong></p>
+<h2 id="src-20-名从何来">SRC-20 名从何来？</h2>
+<p>SRC-20 是 Stamp Request for Comments 20 的缩写，直译成中文为「邮票征求意见 20」。</p>
+<p>这个名称实际上源自于 BRC-20，即 Bitcoin Request for Comments 20/比特币征求意见 20。</p>
+<p>而 BRC-20 的名字又是继承自 ERC-20，即 Ethereum Request for Comments 20/以太坊征求意见 20。</p>
+<p><a href="https://github.com/ethereum/ERCs">ERC</a> 是向以太坊提交改进提案（<a href="https://eips.ethereum.org/">EIP</a>/Ethereum Improvement Proposals）的方式之一，其目标是为以太坊<strong>应用层</strong>设定标准并提供高质量文档。（另外还有针对以太坊共识协议、网络连接机制、接口等网络架构方面的提案类型。）20 这样的数字则是最早在以太坊 GitHub 软件库提交的问题（issue）编号。20 号提案的目标是为以太坊设定一个发行代币的标准。这里是原始的第 20 号问题链接：https://github.com/ethereum/EIPs/issues/20 。</p>
+<figure data-type="image" tabindex="1"><img src="https://czyouge.github.io/post-images/1716947678639.png" alt="" loading="lazy"></figure>
+<p>总之，<a href="https://eips.ethereum.org/EIPS/eip-20">ERC-20</a> 为以太坊上的（同质化）代币定义了一个标准。目前以太坊上的大多数代币都基于此标准，比如 SHIB、UNI、PEPE 以及各种部署在以太坊上的稳定币。</p>
+<p>毫无疑问，ERC-20 是一个非常成功的标准，以至于其它区块链往往在此基础上建立自己的代币标准，于是乎「RC-20」这个固定组合就被继承了过去。为了让「20」这个编号名符其实，其它区块链上的代币标准提案甚至会刻意保留第 20 号提案，比如 Tron 项目的 20 号提案就保留给了 TRC-20。</p>
+<figure data-type="image" tabindex="2"><img src="https://czyouge.github.io/post-images/1716947691572.png" alt="" loading="lazy"></figure>
+<p>后面的 BRC、ARC、SRC 等有类似的操作，它们的 20 号提案都定义了其上的（同质化）代币标准。</p>
+<p>至于 SRC-20 中的 S，是 Stamp（邮票）的缩写，这是因为其基于 Bitcoin Stamps 协议，见下文。</p>
+<h2 id="src-20-的历史">SRC-20 的历史</h2>
+<p>SRC-20 的历史要追溯到染色币（colored coins）这一概念。简单来说，染色币就是为特定的币附带上额外的信息，使其区别于其它的普通币。从 2012 年开始，有不少团队在比特币网络上尝试过构建染色币，但都没能得到广泛应用，直到 2023 年 1 月，Ordinals 协议问世。</p>
+<p>Ordinal 的意思是序数，比如第 1、第 2、第 42 这样的有顺序的数。Ordinals 的做法就是为比特币网络上的每个聪（sat/satoshi）赋予一个序号（即 <a href="https://docs.ordinals.com/">Ordinal theory</a>，也因此某些聪变得比其它聪更稀有）。再基于一定标准，可以将数据嵌入到有序号的聪对应的 UTXO 中，这被称为铭文（Inscription）。</p>
+<p>举个例子说明一下。打开 Ordinals 浏览工具 https://ordiscan.com，然后随便输入一个铭文序号：69420，找到第 69420 号铭文：</p>
+<figure data-type="image" tabindex="3"><img src="https://czyouge.github.io/post-images/1716955711799.png" alt="" loading="lazy"></figure>
+<p>可以看到，这个铭文使用的 sat 是 1,311,843,664,028,113 号 sat，附带的信息中包含一张 svg 图像。</p>
+<p>很明显，这是一个 NFT。这也是 Ordinals 最早的设计用途：在比特币网络上发行 NFT。但之后人们发现，如果能设定一定标准，也能让这个 NFT 变成代币。他们找到的解决方案便是 BRC-20，即将 JSON 格式的数据附加给聪，而这个数据中定义了代币的属性与交易。同样举个例子：</p>
+<blockquote>
+<pre><code class="language-json">{&quot;p&quot;:&quot;brc-20&quot;,&quot;op&quot;:&quot;transfer&quot;,&quot;tick&quot;:&quot;ordi&quot;,&quot;amt&quot;:&quot;52&quot;}
+</code></pre>
+</blockquote>
+<p>这个铭文数据很清晰地说明：将 52 枚名为 ordi 的 brc-20 代币 transfer（转账）给……</p>
+<p>看起来很不错！BRC-20 似乎就是人们一直期待的解决方案——我们可以在比特币上发行新代币了！</p>
+<p>但事实并非如此，从理论上讲，Ordinals 是可能被清除掉的。</p>
+<p>Ordinals 是基于 Ordinal theory 理论对单个聪进行实例化，然而这些被原子化的聪却有可能被错误地支付出去。这是因为它们本质上与特定的 UTXO 关联密切，而比特币协议本身无法区分出这种关联。Ordinal theory 是一种按自身规则运行的所谓「元协议」，但其底层却是 UTXO 的传输。而 Ordinals 中嵌入的数据（资产）却使用了一种账户式余额模式，其规则既独立于特定的 UTXO 运作。</p>
+<p>针对这一缺点，<a href="https://github.com/mikeinspace">Mike In Space</a> 对 Ordinals 进行了改进，创造了 Bitcoin Stamps 协议</p>
+<p>。其中，主要的改进点是将数据存储到交易输出内，而不是 OP_RETURN 信息中。</p>
+<p>也就是说：Ordinals 是使用 UTXO 来确定所有权，而 Stamps 则是使用 UTXO 来存储数据，这样后者便能将数据永远保存在比特币链上。</p>
+<p>SRC-20 便是基于 Stamps 协议来发行同质化代币的标准，类似于 BRC-20 之于 Ordinals。SCR-20 的定义方式与 BRC-20 也基本一样，如下图是 KEVIN 币的一笔交易：</p>
+<figure data-type="image" tabindex="4"><img src="https://czyouge.github.io/post-images/1716955731281.png" alt="" loading="lazy"></figure>
+<h2 id="src-20-的优劣之处">SRC-20 的优劣之处</h2>
+<p>相比于 BRC-20，SRC-20 的主要优点是其数据存储在 UTXO 中，因此不可能被剪除；但这也带来了一些缺点：可存储的数据量上限低、交易成本较高。下面是 SRC-20 与 BRC-20 的主要差异（改编自 <a href="https://cointelegraph.com/learn/what-is-the-src-20-token-standard">cointelegraph</a>）：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>SRC-20 标准</th>
+<th>BRC-20 标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>剪枝</td>
+<td>SCR-20 代币保存在 UTXO 中，无法被剪枝</td>
+<td>节点可通过移除见证数据量来剪除 BRC-20 代币</td>
+</tr>
+<tr>
+<td>签名类型</td>
+<td>多重签名</td>
+<td>单个签名</td>
+</tr>
+<tr>
+<td>交易成本</td>
+<td>构建的交易比 BRC-20 的大</td>
+<td>通过 SegWit 让 BRC-20 交易成本更低</td>
+</tr>
+<tr>
+<td>Token销毁</td>
+<td>如果与代币绑定的 UTXO 被支付出去，便可以销毁代币</td>
+<td>见证数据无法修改</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scr-20-生态">SCR-20 生态</h2>
+<p>Stamps 生态之前有过短暂的热潮，但整体也仅仅处于起步状态，甚至于社区常用的 UniSat 钱包的 UI 界面依然不支持 Stamps 和 SRC-20，即便 SRC-20 社区依然主要使用该钱包进行交易。</p>
+<figure data-type="image" tabindex="5"><img src="https://czyouge.github.io/post-images/1716955741174.png" alt="" loading="lazy"></figure>
+<p>Stamps 和 SRC-20 未来会发展成什么样还很难说，毕竟现在比特币社区也有一些人对 SRC-20 采用的将数据写入 UTXO 的做法很不满。他们认为这种做法会向比特币网络填入大量垃圾数据，导致网络臃肿并妨碍普通用户的使用体验。</p>
+<p>下图是 X 平台用户 <a href="https://x.com/Inaritoo/status/1785936652440940918">@Inaritoo</a> 总结的 Stamps 生态图景，其中本文关注的 SRC-20 代币位于左上角：</p>
+<figure data-type="image" tabindex="6"><img src="https://czyouge.github.io/post-images/1716955749780.jpg" alt="" loading="lazy"></figure>
+<p>接下来我们简单介绍几个比较热门的 SRC-20 代币：</p>
+<ul>
+<li>STAMP：算是 Stamps 的同名代币，也是目前交易量和市值最高的 SRC-20 代币，当前市值约 880 BTC。</li>
+<li>KEVIN：首个部署成功的 SRC-20 代币，诞生时间为 2023-05-03 1:17:37 PM，当前市值约 165 BTC。</li>
+<li>LUFFY：路飞币，目前最成功的 SRC-20 迷因币，当前市值约 800 BTC。</li>
+<li>STMAP：StampMap，一个类似 Reddit Place 像素画的项目，算是首个有实际用途的 SRC-20 代币，，当前市值约 12 BTC。</li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://czyouge.github.io/post-images/1716955755938.png" alt="" loading="lazy"></figure>
+<p><em>交易总额排名前 6 的 SRC-20 代币</em></p>
+<h2 id="相关网站">相关网站</h2>
+<ul>
+<li>官网：https://stampchain.io</li>
+<li>项目库：https://github.com/mikeinspace/stamps</li>
+<li>主要交易网站：OpenStamp：https://openstamp.io/ ；Stampscan：https://www.stampscan.xyz/</li>
+</ul>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2405-blockchainandAI/" class="post-title gt-a-link">
+                    区块链和人工智能之间的协同与冲突
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

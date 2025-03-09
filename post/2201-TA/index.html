@@ -1,0 +1,269 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>ta——关于汉语中的第三人称代词，我有个想法 | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    ta——关于汉语中的第三人称代词，我有个想法
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2022-01-14 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/ideas/" class="post-tags">
+                            # 脑洞
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/hanyu/" class="post-tags">
+                            # 汉语
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/bangu/" class="post-tags">
+                            # 语言
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/luojiyu/" class="post-tags">
+                            # 逻辑语
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/english/" class="post-tags">
+                            # English
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>「张三亲了李四一口，他哭了。」</p>
+<p>在上面这个句子，究竟谁哭了？根据上下文的不同，我们其实可以有多个不同答案：①张三②李四③其他人。</p>
+<p>就我所知，自然语言普遍存在代词指示模糊的问题，期望实现精确语义表达的逻辑语（<em>la lojban.</em>）为此也进行了相当复杂的设计和定义，比如通过回溯方式确定代词指代的顺序或通过设定参数的方式来指示被指代者。而在自然语言中，搞这么复杂是会闹笑话的，别的不说，至少我妈会笑我。</p>
+<!-- more -->
+<p>在英语中，传统上会使用 <code>he</code>、<code>she</code>、<code>it</code> 这三个第三人称单数代词；它们<strong>大致上</strong>可分别对应于汉语中的 <code>他</code>、<code>她</code>、<code>它</code>，即分别对应男性、女性、物体/动物/性别不明的婴儿。为什么说<strong>大致上</strong>？因为在英语文化中，人们经常也会给某些物体赋予性别，这在汉语中并不常见；举个例子，<a href="https://www.iwm.org.uk/history/why-do-ships-have-a-gender">英语文化中通常会用 <code>she</code> 来指代 ship（船）</a>，但又不是所有船都会获得 <code>she</code> 的代称，有资格人格化的船一般比较大。</p>
+<p>随着时代发展，性少数群体的权利日益得到重视，传统的二元性别式代词已经不够用了，英语中出现了新的非二元性别代词，而且还相当多，在 <a href="https://www.bbc.com/news/magazine-34901704">BBC 的这篇报道</a>中就出现了不少，比如将 <code>they</code> 定义范围扩大以指代非二元性别的个体，使用 <code>ze</code>、<code>ve</code>、<code>zie</code> 等新造词。</p>
+<p>自然语言是会自我演进的，英语在变化，汉语自然也会变化。在思考汉语中的第三人称代词时，我产生了一个自己觉得还算比较系统化的思路。我将在本文中阐述这个思路并将其作为一个汉语演讲的小提议。在今后的写作中，我有时也会使用这套代词体系。</p>
+<p>这套体系的优点是在书面表达中能更加细分、更为精准地表达指代关系，同时也不会为口语引入任何额外的负担——所有第三人称单数代词都读作 <code>tā</code>！</p>
+<p>首先，关于复数表达就无需多言了，现代汉语的做法就是加上 <code>们</code>，比如 <code>你们</code>、<code>她们</code>、<code>哈士奇们</code>、<code>被遗弃的毛绒玩具们</code>。至于第三人称单数代词，则整体上可以总结为下表：</p>
+<table>
+<thead>
+<tr>
+<th>第三人称单数代词</th>
+<th>定义范围</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>他</td>
+<td>男性</td>
+<td>相比于传统定义，范围大幅收窄，其不再作为统称用的代词。</td>
+</tr>
+<tr>
+<td>她</td>
+<td>女性</td>
+<td>保持不变。</td>
+</tr>
+<tr>
+<td>佗</td>
+<td>非二元性别、性别不明、统称</td>
+<td>新引入的代词，可用于指代明确男性和女性之外的其它所有情况。</td>
+</tr>
+<tr>
+<td>它</td>
+<td>事物</td>
+<td>仅指代无生命事物，不再包括动物。</td>
+</tr>
+<tr>
+<td>牠</td>
+<td>动物</td>
+<td>在非拟人化表达时表示动物。</td>
+</tr>
+<tr>
+<td>祂</td>
+<td>神或精神体</td>
+<td>没有实体的智慧存在。</td>
+</tr>
+<tr>
+<td>铊</td>
+<td>智慧型机器人</td>
+<td>新引入的代词，可用于指代拥有智慧的人造机器。</td>
+</tr>
+</tbody>
+</table>
+<p>下面逐一介绍我构想的这套第三人称单数代词的体系：</p>
+<p><code>他</code>：传统上，<code>他</code> 通常指代男性，也会被用作性别不明时的人称代词，其复数形态 <code>他们</code> 可以指代一群男人、一群男男女女（甚至可以包括百女一男的情况）、一群其它性别或性别不明的人，有时候 <code>他们</code> 还可用于指代一些人和其它动物构成的整体，比如「你看那个男人和那条金毛狗，他们是好朋友。」但在我的构想中，<code>他</code> 的定义范围会收缩至男性，<code>他们</code> 也仅用于指代一群男人，不再包括女性、其它性别和性别不明者。</p>
+<p><code>她</code>：<code>她</code> 是古代汉语中没有的词汇，而是在 1920 年左右由刘半农首创，之后逐步得到推广，现已成为现代汉语中不可或缺的代词。一般来说，<code>她</code> 用于指代女性，也有一些作者会在物体的拟人化中使用 <code>她</code>。在新体系中，<code>她</code> 的定义范围不变，<code>她们</code> 则指代一群女人。更多有关 <code>她</code> 的介绍，可参阅《<a href="https://www.lishiyushehui.cn/article/item/18">“她”字的故事：女性新代词符号的发明、论争与早期流播</a>》。</p>
+<p><code>佗</code>：为了替代 <code>他</code> 在多性别复数及其它性别代词方面的空缺，我主张引入一个新字 <code>佗</code>。这个字在现代汉语中读 <code>tuō</code> 或 <code>tuó</code> 音，但在这里我也为其引入新的读音 <code>tā</code>，即与 <code>他</code> 和 <code>她</code> 一致。在这个体系中，<code>佗</code> 可指代非二元性别的个人、性别不明的个人或无性别人士（<em>如果真的有的话</em>），也可用于无性别事物的拟人化表达。在复数表达时，<code>佗们</code> 可指代任意性别的混合群体，其中自然也涵盖了 <code>她们</code> 和 <code>他们</code> 的范围。我个人已在之前一篇译文《<a href="https://www.czyouge.xyz/post/2111-modernfamily/">现代家庭</a>》中使用了 <code>佗</code> 来翻译原文指代跨性别者的 <code>they</code>。</p>
+<p><code>它</code>：在大陆地区，<code>它</code> 的范围很广，包含各种非人类动物、无生命的物体、抽象事物、观念和概念……基本上除了指代人类的情况，其它情况都是用 <code>它</code>。新的体系中，<code>它</code> 的范围有所收窄，不再包括动物。</p>
+<p><code>牠</code>：对于 <code>它</code> 中的动物部分，新的体系将使用 <code>牠</code> 来指代。这个词并不是一个新词，实际上这正是台湾地区用于指代动物的词。顺带一提，在表达某人就像野兽时，也不妨使用 <code>牠</code> 来指代那个人。</p>
+<p><code>祂</code>：这个词同样已经被台湾人使用很久了，本体系将直接纳入这个词，用于指代神灵以及精神体，比如鬼魂、科幻中常有的无实体智慧生物等等。</p>
+<p><code>铊</code>：我决定还为这个体系引入一个用于指代智慧型机器人的代词。实际上，在具体字的选择上，我在 <code>铊</code>、<code>坨</code>、<code>砣</code> 之间犹豫不决，一则当前的计算机处理器大多基于硅芯片，二则机器人机体又多使用金属，但现在基于有机物的<a href="https://www.statnews.com/2021/12/22/biological-computer-target-cancer-spare-healthy-cells/">生物计算机</a>以及高深莫测的量子计算机也初有苗头；另一方面，人工智能软件与实体机器人的定义差别也需要考虑。因此具体字的选择还值得商榷——我们甚至可以考虑新造汉字，我有个想法是合并 <code>一</code> 和 <code>〇</code> 两个汉字得到如下图的新字。当然，也可以相信这个代词是完全没有必要的，毕竟使用 <code>它</code> 就完全能够胜任，但引入这个词对我个人有些益处——我正在写的一篇小说中有一个机器人角色，这能让我的故事更加清晰。</p>
+<figure data-type="image" tabindex="1"><img src="https://ipfs.io/ipfs/QmNfMvZvixiDA9hbELmpNQ7pBiBStn4n8ZYDRBuDzvKJvZ" alt="" loading="lazy"></figure>
+<p>关于 <code>其 ta</code>：我个人注意到很多人都没注意 <code>其它/其他</code> 的用法，但在该体系中，我提议将 <code>其 ta</code> 中的 <code>ta</code> 也纳入到以上定义范围中，比如：<code>其他人</code> 仅仅指男人、<code>其她人</code> 仅仅指女人、<code>其佗人</code> 可成为最广义的用法、另有 <code>其它耳环</code>、<code>其牠肥猪</code>、<code>其祂美女神仙</code> 等。</p>
+<p>当然，以上定义只是我的个人构想，可以进一步探讨及改进。</p>
+<p>最后，回到最开始的问题。「张三亲了李四一口，他哭了。」那么谁哭了呢？我们还是不知道。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2201-Prince-of-Purification/" class="post-title gt-a-link">
+                    净化王子
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

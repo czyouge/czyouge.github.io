@@ -1,0 +1,216 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>在国内用Metamask连接不上BSC该如何解决 | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    在国内用Metamask连接不上BSC该如何解决
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2022-09-30 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/tech/" class="post-tags">
+                            # 技术
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/Crypto/" class="post-tags">
+                            # 数字货币
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/blockchain/" class="post-tags">
+                            # 区块链
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>前段时间，我发现我在 Metamask 上配置的  BNB Smart Chain（BSC）钱包连接不上了，但 Binance Wallet 却能继续使用。但因为很少用，也没在意。昨天偶然想起，研究了下，找到了原因。这个问题估计很多中国人会遇到，所以在这里分享一下。</p>
+<!-- more -->
+<h2 id="问题在哪里">问题在哪里？</h2>
+<p>大多数人在 Metamask 配置 BSC 钱包都会参考这一套方案：</p>
+<ul>
+<li>网络名称（ Network Name）：Smart Chain</li>
+<li>新的RPC URL（ New RPC URL）：https://bsc-dataseed.binance.org/</li>
+<li>智能链ID（ChainID）：56</li>
+<li>符号（Symbol）：BNB</li>
+<li>区块浏览器URL（Block Explorer URL）：https://bscscan.com</li>
+</ul>
+<p>而且<a href="https://academy.binance.com/zh/articles/connecting-metamask-to-binance-smart-chain">币安官网</a>也是这么说的。但现在的问题是在中国国内，我们没法直接连接 binance.org 了——至少我使用的运营商没办法。具体原因不明，但我试过 <code>ping binance.org</code>，结果每一次都是不同的 IP 地址而且结果无一例外都是 <code>请求超时</code>。</p>
+<p>也就是说，我的 Metamask 根本没办法连接到上面配置的 RPC URL！</p>
+<h2 id="解决方法">解决方法</h2>
+<p>问题找到了，方案就来了。</p>
+<p>虽然上面的官方教程没有提到，但其实我们可以更换 RPC URL。</p>
+<p>访问 <a href="https://www.bnbchainlist.org/">https://www.bnbchainlist.org/</a>，我们可以找到 BNB Smart Chain Mainnet 的 RPC URL 列表：</p>
+<figure data-type="image" tabindex="1"><img src="https://czyouge.github.io/post-images/1664505542261.png" alt="" loading="lazy"></figure>
+<p>选择一个当前网络能成功连接的服务器地址（选 Score 栏为绿色且延迟低的），替换掉原有配置中的 RPC URL 即可。</p>
+<p>如此，便能继续在 Metamask 上使用 BSC 了。</p>
+<p>❈❈❈❈❈❈❈❈❈</p>
+<p>备注：RPC 的意思是 remote procedure call，即远程过程调用。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2209-movie-tv-glossary/" class="post-title gt-a-link">
+                    Netflix影剧标签含义
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

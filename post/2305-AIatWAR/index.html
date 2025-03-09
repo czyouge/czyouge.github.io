@@ -1,0 +1,215 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>战争中的人工智能 | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    战争中的人工智能
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-05-07 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/war/" class="post-tags">
+                            # 战争
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/tech/" class="post-tags">
+                            # 技术
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/AI/" class="post-tags">
+                            # 人工智能
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/translation/" class="post-tags">
+                            # 翻译
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p><em>导读：本文译自 War On The Rocks 文章《<a href="https://warontherocks.com/2023/04/ai-at-war/">AI AT WAR</a>》，作者：Anthony King。2023 年 4 月 27 日。文章内容不代表译者观点。</em></p>
+<p>人们普遍相信世界又到了另一场军事革命的边缘。人工智能（AI）即将改变战争的性质，正如之前的火药、坦克、飞机和原子弹一样。如今，许多国家都在积极主动地利用 AI 来赢得军事优势。举个例子，中国已经宣布计划在 2030 年之前在 AI 领域处于世界领先地位。中国的《<a href="http://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm">新一代人工智能发展规划</a>》宣称：「人工智能是引领未来的战略性技术。」俄罗斯总统弗拉基米尔·普京也有类似<a href="https://www.cnas.org/publications/reports/strategic-competition-in-an-era-of-artificial-intelligence">发言</a>：「无论是谁，只要成为这一领域的领导者，就会变成世界的统治者。」为了应对中国和俄罗斯带来的挑战，美国已表示将实施「第三次抵消战略（The Third Offset Strategy）」。美国将大力投入 AI、自动化和机器人技术，以维持其在国防领域的优势。</p>
+<!-- more -->
+<p>有鉴于这些惹人眼球的进展，军事评论家们对 AI 的军事应用问题产生了浓厚兴趣。举个例子，在近期出版的一本专著中，Ben Buchanan 和 Andrew Imrie <a href="https://www.amazon.com/New-Fire-War-Peace-Democracy/dp/0262046547">宣称</a> AI 的出现堪比人类开始使用火。AI 控制的自动化武器将会变得越来越精准、快速和致命。它们代表着战争的未来。其他许多学者和专家也同意他们的看法。比如，杰出的计算机科学家和人工智能先驱 Stuart Russell 在其 2020 年的 BBC 里斯讲座（<a href="https://www.bbc.co.uk/programmes/articles/1N0w5NcK27Tt041LPVLZ51k/reith-lectures-2021-living-with-artificial-intelligence">BBC Reith Lectures</a>）中用专门一集介绍了 AI 的军事潜力。他公开表示：屠杀机器和杀手机器人正在兴起。他描述了一个场景，其中有一架罐子大小的致命四轴飞行器，装备了爆炸装置：「人员杀伤地雷可以清除城市中所有 16 到 60 的男性或以色列境内所有的犹太公民，而且不同于核武器，它不会波及城市基础设施。」Russell 做总结时说：「将有 800 万人想知道你为什么不能保护他们免于机器人的追杀。」其他许多学者也赞同 Russell 的观点，包括 <a href="https://www.amazon.co.uk/Kill-Chain-Defending-America-High-Tech/dp/031653353X">Christian Brose</a>、<a href="https://www.amazon.co.uk/Warbot-Dawn-Artificially-Intelligent-Conflict/dp/1787388255">Ken Payne</a>、<a href="https://www.amazon.co.uk/Bitskrieg-Challenge-Cyberwarfare-John-Arquilla/dp/1509543627">John Arquilla</a>、<a href="https://www.amazon.co.uk/Swarm-Troopers-small-drones-conquer-ebook/dp/B017Q9GGVE">David Hambling</a> 和 <a href="https://www.amazon.co.uk/Seven-Seconds-Die-Nagorno-Karabakh-Warfighting/dp/1636241239">John Antal</a>；他们相信随着第二代 AI 的发展，可能会很快出现致命性自主武器，比如杀人无人机群。</p>
+<p>军事革命一开始的时候可能并不如其推崇者预想那样激烈。1990 年代的军事事务革命确实很重要，它为作战方式带来了新的可能性，但它并没有消除不确定性（uncertainty）。类似地，有关致命性自动化和 AI 的<a href="https://www.tandfonline.com/doi/abs/10.1080/00396338.2017.1375263">辩论</a>也多有夸张之辞。这些讨论歪曲了 AI 目前的工作方式，并进而歪曲了其在可见的未来里对军事行动的潜在影响。尽管远程自动化系统的重要性与日俱增，但在战场上用自动无人机群替代军队的可能性还是很小的，也很难用超级计算机替代人类指挥官。AI 在 1950 年代变成了一大主要研究主题。那时候，其运作方式是基于符号逻辑——程序员将输入编码好之后交由 AI 处理。这类系统也被称为<a href="https://www.penguinrandomhouse.com/books/658149/the-promise-of-artificial-intelligence-by-brian-cantwell-smith/">老式人工智能</a>。AI 取得了一些进展，但由于它是基于对所指定的符号进行操作，其实用性就非常有限了，尤其是在真实世界中。由此出现了一次「人工智能冬天」，从 1970 年代后期直到 1980 年代结束。</p>
+<p>自 1990 年代后期以来，基于大数据、大规模计算能力和算法的第二代 AI 取得了一些惊人突破，其中包括三个有重大意义的事件。1997 年 5 月 11 日，IBM 的深蓝（Deep Blue）击败了国际象棋世界冠军加里·卡斯帕罗夫。2011 年，IBM 的 Watson 在《Jeopardy!》获胜。然后是更出色的成就：2016 年 3 月，AlphaGo 以 4-1 的成绩击败世界围棋冠军李世石。</p>
+<p>深蓝、Watson 和 AlphaGo 都是这条卓越之路上的重要路标。不过二十年事件，AI 就从让人失望的失败迈向了意想不到的胜利。但是，我们需要认识到第二代 AI 的能力和局限，这非常重要。第二代 AI 的开发围绕着一个概念：神经网络。机器学习程序能通过它们的网络处理大量数据，不断调整分配给特定数据片段的权重，最终生成合乎逻辑的答案。这类系统是基于概率的，并且是归纳式的。程序和算法什么也不知道。从人类的角度看，它们并不知道真实世界，也不清楚它们所处理的数据的含义。机器学习 AI 只是使用算法通过大量重复试验来构建统计概率模型。通过这种方式，第二代 AI 可以识别出数据中多种相关性。只要有足够多的数据，概率归纳就能成为一种强大的预测工具。是的，AI 并不能辨别因果关系或意图动机。著名的硅谷科技企业家 Peter Thiel 曾充满说服力地阐明了 AI 的局限：「忘掉那些科幻般的想象吧，现在的 AI 的真正强大之处是可以应用于相当简单单调的任务，比如计算机视觉和数据分析。」由此，尽管机器学习在一些有限的、限定范围的、可数学表征的任务上的表现远远优于人类，但依然很弱。它完全依赖其训练所用的数据，甚至实际环境（即数据）中最细微的改变就能让其完全失去作用。</p>
+<p>对 AI 军事革命的前景而言，基于数据的归纳式机器学习面对真实环境的这种脆弱性是非常重要的问题。AI 的<a href="https://www.amazon.co.uk/Warbot-Dawn-Artificially-Intelligent-Conflict/dp/1787388255">支持者</a>和<a href="https://www.stopkillerrobots.org/">反对者</a>都暗示：在不久的将来，自主无人机将能相当轻松地在城市环境中飞行、识别和攻击目标。毕竟，<a href="https://thebulletin.org/2021/04/meet-the-future-weapon-of-mass-destruction-the-drone-swarm/">自主无人机群</a>已经得到过展示了——但那是在公认的人为和受控环境中。但是，在实际情况中，训练能在陆战中自主行动的无人机是非常困难的。战场环境非常动态多变，还非常复杂，尤其是平民和军人混杂在一起的城市环境。目前似乎没有可用于可靠训练无人机群的数据——战场情况实在过于多变了。类似地，我们也很难了解算法是如何做出指挥决策的。指挥决策需要解析不同结构的信息，平衡地考虑政治和军事因素；所有这些都需要进行判断。Avi Goldfarb 和 Jon R. Lindsay 在<a href="https://direct.mit.edu/isec/article/46/3/7/109668/Prediction-and-Judgment-Why-Artificial">近期的一篇文章</a>中认为：如果有完美的数据，那么数据和 AI 是制定简单决策的最佳选择。可以说在本质上，军事指挥决策都必然涵盖复杂性和不确定性。需要指出，尽管<a href="https://www.amazon.co.uk/How-Google-Works-Eric-Schmidt/dp/1444792490">谷歌</a>和亚马逊都是杰出的数据公司，但它们的经理人们却<a href="https://www.amazon.co.uk/Everything-Store-Jeff-Bezos-Amazon/dp/0552167835">并未设想过某天</a>用算法来替代他们制定战略和运营决策。数据在经过算法的快速处理后可以帮助公司高管们<a href="https://www.amazon.co.uk/Super-Pumped-Battle-Mike-Isaac/dp/0393358615/">更好地理解市场</a>——其<a href="https://www.amazon.co.uk/Airbnb-Story-Disrupted-Industry-Billions-ebook/dp/B01N0HEY1Y/">深度和精细程度</a>都是它们的竞争对手所不能及的。<a href="https://www.amazon.co.uk/Trading-Speed-Light-Algorithms-Transforming/dp/0691211388/">信息优势</a>已经助力它们成就霸主地位。但是，机器学习没能替代经营管理职能。</p>
+<p>因此在近未来时间里，由 AI 控制的致命性自主无人机或杀人机器人还是非常不可能接管战场的。计算机或超级计算机也极不可能替代指挥官。但是，这并不意味着 AI、数据和机器学习对当代和未来的军事行动不重要。它们非常重要。但是，AI 和数据的职能主要并不是致命性的——它们并不像是人类学会用火那样。数据是存储在赛博空间中的数字化信息，其重要性在于能让国家政府更广度、更深度和更可信地理解它们自身及对手。当使用 AI 有效地处理大量数据后，军事指挥官能以前所未有的深度、速度和分辨率感知战场空间。数据和 AI 还对网络军事行动和信息战非常关键。它们已经成为防御和攻击中不可或缺的部分。AI 和数据在作为利用赛博空间的数字化军事智能方面还算不上人类的新火，但是却能作为一个巨大的新信息源。AI 能帮助我们「<a href="https://engelsbergideas.com/essays/the-other-side-of-the-hill-28-august-information-war-strategy/">看到山的另一边</a>」，它在这方面是革命性的。对现代战争而言，数据和 AI 是一种关键性的情报职能，甚至可以说是唯一关键的情报职能。</p>
+<p>著名军事评论家 Paul Scharre 曾表示 AI 将无可避免地走向致命性自动化。他在 2019 年出版的畅销书《无人军队》（<a href="https://www.amazon.co.uk/Army-None-Autonomous-Weapons-Future/dp/0393608980">Army of None</a>）中描绘了远程自动化武器系统的兴起。Scharre 在书中提出 AI 将为战争带来革命：「在未来的战争中，机器可能决定生死。」即便 <a href="https://warontherocks.com/2023/04/ais-inhuman-advantage/">AI 的潜力</a>依然让他着迷，但他的想法已经发生了重大变化。他 2023 年 2 月出版的新书《四大战场》（<a href="https://www.amazon.co.uk/Four-Battlegrounds-Power-Artificial-Intelligence/dp/0393866866/">Four Battlegrounds</a>）对他最初的观点进行了重大修正。新书中他放弃了在《无人军队》中描绘的灾难性情形。如果说《无人军队》是一本科幻散文，那么《四大战场》就是一本政治经济学作品。它解读了大国竞争的具体问题以及竞争之下的产业战略和监管体系。这本书描述了数字化情报对军事竞争的影响。Scharre 分析了利用数据的力量所需的监管环境。他有力地宣称，在美国和中国的超级大国竞争中，争夺数据以及处理数据的 AI 方面的优势将会成为军事的决定性因素。数据将会提供重大的情报优势。在 Scharre 看来，决定这场情报竞赛胜者的关键资源有四种：「在这四大战场——数据、计算、人才、机构（科技公司）——领先的国家将在 AI 领域获得重大优势。」他认为美国和中国会陷入对这四种资源的殊死争夺中。现在，中国和美国都已经充分认识到，无论哪个国家在 AI 领域获得优势，该国就能在政治、经济以及关键的军事领域显著领先。该国能比对手知道得更多。该国能更加高效地使用军事力量。该国能主导信息和网络空间。该国将更具杀伤力。</p>
+<p>《四大战场》描绘了中国和美国在数据和 AI 上的剧烈竞争。它描述了这两个国家近来的进展并评估了它们的相对实力。中国仍在一些领域落后于美国。美国有人才优势，并且在研究和技术上领先。「中国在芯片生产方面是一潭死水。」但是，Scharre 警告美国不要自满。事实上，这本书生动展现了作者对美国将在数据竞争中落后的担忧。因此，Scharre 重点说明了中国的优势以及其高速发展的速度。中国已有 9 亿网民，其数据量远超美国。在网约车等经济领域，中国的数字化程度也远远超越美国。举个例子，美国就没有微信的同类产品。中国的许多应用都优于美国的类似应用。此外，中国政府也不受法律或公民的隐私担忧的约束。中国共产党积极监控其公民的数字档案——收集他们的数据并记录他们的活动。政府在城市中使用人脸识别技术来识别个人。</p>
+<p>政府控制也使中国的科技公司受益：「中共在情报监控和社会控制方面的大规模投资极大推动了中国 AI 公司的发展并将它们与政府绑在了一起。」中国政府与科技行业有紧密的协同。中国在监管方面的优势也远超美国。中国共产党会为<a href="https://www.ft.com/content/5d0af3c4-846c-11e8-a29d-73e3d454535d">百度和阿里巴巴</a>等科技巨头提供担保：「中国对科技行业的投资正在带来回报。」Scharre 总结到：「中国不仅仅是在创造一种新型数字威权主义模式，并且还在积极地输出它。」</p>
+<p>美国政府将如何应对中国对数据和 AI 主导地位的争夺？Scharre 在这方面写得很有意思。美国政府为了有能力利用数据的军事潜力，需要在监管方面做出重大改变。武装部队需要与科技行业深入合作。他们「不能只与传统国防承包商合作，还必须与创业公司接触。」这不是件容易事。Scharre 记录了美国那充满挑战性的监管环境：「在美国，亚马逊、苹果、Meta 和谷歌等大型科技公司是独立的权力中心，经常在特定问题上与政府发生分歧。」Scharre 讨论了谷歌在 2017 年臭名昭著的抗议活动——该公司员工拒绝参与国防部的 <a href="https://www.nytimes.com/2018/06/01/technology/google-pentagon-project-maven.html">Project Maven</a> 中的工作。美国科技行业中一部分人对 AI 的军事应用充满疑虑。</p>
+<p>美国科技公司可能一直都不愿与武装部队合作，而国防部也一直没有提供帮助。这无形中<a href="https://www.amazon.co.uk/Four-Battlegrounds-Power-Artificial-Intelligence/dp/0393866866/">妨碍了军方与科技公司的合作</a>。国防部与国防产业之间一直关系密切。举个例子，1961 年，德怀特·D·艾森豪威尔总统就「军事-工业复合体」对民主的威胁发出了警告。国防部已经发展出了一套采购和承包流程，而这主要是为政府采购作战平台设计的，比如坦克、舰船和飞机。为了满足国防部那千差万别的指标，洛克希德·马丁公司和诺思罗普·格鲁曼公司已经非常擅长交付相应的武器系统。科技公司的工作方式却非如此。正如 Scharre 的一位受访者所说：「购买 AI 的方式和购买子弹不一样。」科技公司售卖的不是枪支那样的具体功能。它们卖的是数据、软件和计算能力——归总而言，它们卖的是专业知识。针对一个非常具体的问题，开发算法和程序的最好方法是迭代式地开发。对一个军事任务而言，某些软件和算法的全部潜力可能无法直接明显地看出来，即使对科技公司也是如此。而科技公司的运营环境有着激烈的竞争，因此更加偏好与国防部建立更为灵活、开放式的承包体系——科技公司需要安全和快速的资金回报。科技公司寻求的是合作参与，而不只是一个构建某个平台的合同。</p>
+<p>美国军方，尤其是国防部，发现这种新式方法并不总是很容易的承包模式。过去，官僚机构的需求反应很迟钝——采购流程可以耗费 7 到 10 年时间。但是，尽管存在许多紧张矛盾并且该体系远非完美，Scharre 也还是注意到监管环境正在变化。他描述到美国正在出现新的军事-科技复合体。当然，Project Maven 就是这一进程的例证。2017 年，Bob Work 发布了一份现在已经很著名的<a href="https://www.defense.gov/News/News-Stories/Article/Article/1254719/project-maven-to-deploy-computer-algorithms-to-war-zone-by-years-end/">备忘录</a>，其中宣布了「算法战跨职能团队」——Project Maven。自全球反恐战争期间出现监视无人机和军用卫星以来，美国军方就浸润在了全动态视频流中。那些录像的价值无与伦比。举个例子，2019 年，美国空军使用 24 小时全天候的空中监视系统 Gorgon Stare 回溯了喀布尔发生的一次汽车炸弹爆炸事件（其中 126 名平民死亡），最终找到了用于发动这次攻击的安全屋的位置。然而，用人类来做这件事实在太慢了。因此，空军开始实验使用计算机视觉算法来筛查全动态视频。Project Maven 的目标是<a href="https://www.amazon.co.uk/Four-Battlegrounds-Power-Artificial-Intelligence/dp/0393866866/">助力</a>空军。但它需要新的承包环境。Work 没有采用长时间的采购流程，而是引入了 90 天的短时流程。公司有三个月时间来展示它们的实用程序。如果它们取得了进展，就执行与它们的合同——如果没有进展，它们就出局。与此同时，Work 解密了无人机录像，以便 Project Maven 可以训练它们的算法。到 2017 年 7 月时，Project Maven 已经有了初始的操作系统，可以检测出 38 种不同的目标类别。到那年年底时，该系统被部署到了用于打击 ISIS 的行动中：「这个工具相当简单，能够从特种操作员使用的 ScanEagle 无人机视频中识别和跟踪人员、车辆和其他目标。」</p>
+<p>自 Project Maven 之后，国防部还推出了其它一些促进军事和科技行业合作的措施。国防创新部门（<a href="https://www.amazon.co.uk/Four-Battlegrounds-Power-Artificial-Intelligence/dp/0393866866/">The Defense Innovation Unit</a>）加速推进国防部与硅谷公司的关系，以 26 天为期限提供合同，而不是以月或年为期。在国防创新部门最初的五年里，其与 120 家「非传统」公司签订了合同。在 Jack Shanahan 中将的领导下，联合人工智能中心（Joint Artificial Intelligence Centre）在推进武装部队与科技公司的合作之间发挥了重要作用，涉及的任务包括人员救援和救灾行动，它们开发了用于绘制野火地图和灾后评估的软件——我们并不清楚 Scharre 书中的这些例子是否暗含了更军事的用途。在经历过早期的困难之后，James Mattis 将军在担任国防部长时创建的联合企业国防基础设施（Joint Enterprise Defense Infrastructure）革新了对科技公司的采购体系。举个例子，国防部在 2021 年投入近 1 亿美元帮助 Anduril 开发了一套基于 AI 的反无人机系统。</p>
+<p>《四大战场》是对 AI 和战争相关文献的极好补充，内容丰富。这本书要传达的信息很清楚。对军队而言，数据和 AI 现在很重要，将来也非常重要。但是，数据和 AI 并不会从根本上改变战斗本身——操作致命武器系统的仍将主要是人类，包括能杀人的远程武器系统，就像发生在乌克兰的野蛮战争中的那样。战斗中的状况复杂又让人迷惑。为了让武器发挥最大效果，人类的判断力、技巧和诡诈能力都是必需的。但是，任何希望在未来战场上获胜的军队都需要发挥出大数据的潜力——军队必须掌控战场空间中汹涌的数字化信息。人类自身是没有能力做到这一点的。因此，总部需要算法和软件来处理那些数据。军方需要与科技公司建立紧密的合作关系来创造这些系统，行动指挥部需要数据科学家、工程师和程序员来保证这些系统正常工作。如果武装部队能够做到这一点，数据将让他们更深度和更广度地看透战场空间。这无法完全解决军事行动的问题——迷雾和摩擦（fog and friction）依旧会持续存在。但是，得到了数据助力的指挥官也许有能力更加有效且高效地部署军队。数据能增强武装部队和人类战斗队伍的杀伤力。俄乌战争已经让我们先一步看到了以数据为中心的军事行动是要胜过仍以模拟方式行动的对手。Scharre 的书是在疾呼，是为了确保在乌克兰的俄军的命运不会在下一场战争到来时落到美国头上。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2302-if-lions-could-speak/" class="post-title gt-a-link">
+                    如果狮子会说话：想象外星人
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

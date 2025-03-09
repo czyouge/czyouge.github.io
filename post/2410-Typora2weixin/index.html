@@ -1,0 +1,304 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Typora将文章图片上传至微信公众号素材库 | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Typora将文章图片上传至微信公众号素材库
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-10-01 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/Typora/" class="post-tags">
+                            # Typora
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/ChatGPT/" class="post-tags">
+                            # ChatGPT
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/yzYem7XsU/" class="post-tags">
+                            # AI
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>我参考了这篇文章《<a href="https://www.51cto.com/article/750173.html">利用微信公众号的图片上传接口，创造属于自己的图床功能！</a>》，但它却有两个问题：</p>
+<ol>
+<li>图片不是上传到素材库，而是另一个图片库（虽然无法在素材库管理，但可以用于发图文消息，一般来说也足够使用）；</li>
+<li>上传的图片名称包含了完整的路径名，于是会出现类似这样的文件名：<code>C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\Temp\\\\Typora\\\\typora-icon.png</code> 。冗长而臃肿。</li>
+</ol>
+<p>在 ChatGPT 的帮助下，问题 1 很容易就得到了解决，但问题 2 却很困难。之后我用 Python 简单试了下上传到素材库，发现图像文件名称能成功保持不变。于是我突发奇想，让 ChatGPT 将上面的 Go 程序改写成了 Python 版本，问题 2 就这样得到了解决。原因嘛，我也不清楚。</p>
+<!-- more -->
+<p>这里分享下我得到的 Python 版本：</p>
+<pre><code>import requests
+
+import json
+
+import sys
+
+  
+
+# 常量定义
+
+APP_ID = &quot;你的APP_IDID&quot;
+
+APP_SECRET = &quot;你的APP_SECRET&quot;
+
+  
+
+ACCESS_TOKEN_URL = f&quot;https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid={APP_ID}&amp;secret={APP_SECRET}&quot;
+
+UPLOAD_PERMANENT_IMAGE_URL = &quot;https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=&quot;
+
+  
+
+# 获取 access_token
+
+response = requests.get(ACCESS_TOKEN_URL)
+
+if response.status_code == 200:
+
+    res = response.json()
+
+    access_token = res.get(&quot;access_token&quot;)
+
+else:
+
+    print(f&quot;Failed to get access token: {response.text}&quot;)
+
+    sys.exit(1)
+
+  
+
+# 确保 access_token 存在
+
+if access_token:
+
+    urls = []
+
+    # 获取命令行参数并上传图片
+
+    for v in sys.argv[1:]:
+
+        files = {
+
+            'media': open(v, 'rb'),
+
+        }
+
+        data = {
+
+            'type': 'image',
+
+        }
+
+  
+
+        # 发送图片上传请求
+
+        upload_response = requests.post(f&quot;{UPLOAD_PERMANENT_IMAGE_URL}{access_token}&amp;type=image&quot;, files=files, data=data)
+
+  
+
+        if upload_response.status_code == 200:
+
+            res_url = upload_response.json()
+
+            url = res_url.get(&quot;url&quot;)
+
+            if url:
+
+                urls.append(url)
+
+        else:
+
+            print(f&quot;Failed to upload image {v}: {upload_response.text}&quot;)
+
+  
+
+    # 输出上传成功的 URL
+
+    if urls:
+
+        print(&quot;Upload Success:&quot;)
+
+        for url in urls:
+
+            print(url)
+
+else:
+
+    print(f&quot;Failed to retrieve access token: {response.text}&quot;)  
+</code></pre>
+<p>其它步骤与原文差不多，只不过需要使用对应的 Python 操作。</p>
+<p>设置完成后，在 Typora 中写作时便可以自动将图片上传到微信公众号的素材库了。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2408-pura-malum/" class="post-title gt-a-link">
+                    恶童
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

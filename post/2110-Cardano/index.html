@@ -1,0 +1,234 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Cardano的结构和参数以及应对网络拥堵的方案 | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Cardano的结构和参数以及应对网络拥堵的方案
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-10-23 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/blockchain/" class="post-tags">
+                            # 区块链
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/invest/" class="post-tags">
+                            # 投资
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/Cardano/" class="post-tags">
+                            # Cardano
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/NFT/" class="post-tags">
+                            # NFT
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p><strong>本文译自 IOHK 博客《<a href="https://iohk.io/en/blog/posts/2021/10/21/cardano-robust-resilient-and-flexible/">Cardano: robust, resilient – and flexible</a>》，作者：<a href="https://iohk.io/en/blog/authors/kevin-hammond/page-1/">Kevin Hammond</a>，软件工程师。2021 年 10 月 21 日。</strong></p>
+<p><em>导读：Cardano 区块链上的 NFT 项目正在爆发式发展，但与此同时，由于 NFT 创建过程涉及到在短时间内处理大量交易，因此使得 Cardano 出现了明显的网络拥堵问题。IOHK 的这篇文章从架构设计和参数配置角度解释了这些问题出现的原因并简单说明了短期及中长期的可能方案。</em></p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://czyouge.github.io/post-images/Cardano.png" alt="" loading="lazy"></figure>
+<p>Cardano 的设计目标是能以全球级分布式的方式为数以亿计用户提供服务。与其它去中心化区块链一样，这意味着我们需要稳定持续地产生符合预期的新区块；这些区块以透明的方式记录了用户之间的交易，合在一起会让区块链不断增长。为了确保新区块能以一种高效且安全的方式传播到整个网络，整个系统必须要在计算、内存、存储和网络资源的消耗上达到足够高的效率。</p>
+<p>灵活性是此中关键，因此 Cardano 协议的一个重要特征就是其架构设计充分考虑了真正的可扩展性（scalability）。这不只是为了实现更长期的目标，即把 Cardano 打造成一个真正全球化的、完全去中心化的操作系统；而且其还采用了参数化的方法，旨在灵活应对价格波动、网络饱和及需求增长等情况。Cardano 提供了一些协议参数，可让该系统无需硬分叉即可实现对系统行为的调整。即便如此，如果确实需要更重大的升级，也能够使用我们的硬分叉组合器（HFC/hard fork combinator）技术实现。这些特性组合起来，成为了 Cardano 不同于现有其它区块链的差异化要素，让今天的 Cardano 就已经非常稳健和可靠，并且使其具备了高度敏捷（agile）的升级路径，从而能灵活应对网络的增长和使用情况的变化。</p>
+<p>Cardano 的路线图设计分为一系列阶段，从而让我们能一步一个脚印地迈向最终目标。Byron 阶段的目标是采用联合网络形式实现基本的交易功能。这让我们可以开始构建社区和建立合作关系，同时向下一阶段努力。Byron reboot 为进一步的功能开发奠定了坚实的基础，而 Shelley 阶段则引入了质押池，进一步扩大了社区规模并开始了 100% 去中心化的区块生产之旅。</p>
+<p>今年 Cardano 又引入了几个备受期待的新功能。自 2021 年初以来，随着 Mary 世代的到来，Cardano 已经支持在账本上创造其它资产代币和非同质化代币（NFT）。由于 Cardano 手续费很低，而且代币创建无需智能合约，因此我们看到 Cardano NFT 出现了爆发式的增长。进入 9 月，Alonzo 升级使 Cardano 开始支持 Plutus 智能合约，从而使其可以运行种类繁多的去中心化应用（DApp）。目前 Cardano 的智能合约还处于相当早期的阶段，但已经有<a href="https://github.com/input-output-hk/essential-cardano/blob/main/essential-cardano-list.md">数十个项目</a>在开发 DApp 了而且已经有几个项目已经接近可部署状态。很快相关的开发活动会进一步加速。这些新功能会影响 Cardano 账本处理新脚本和交易的方式，同时也会对可用资源产生新的需求。随着交易活动增多，Cardano 架构支持实现敏捷地应对和适应需求。</p>
+<h2 id="网络容量">网络容量</h2>
+<p>网络连接是 Cardano 运作的核心。Cardano 网络会向分散全球的节点分发交易和区块数据，而这些节点的作用是生成和验证该区块链。这个过程称为数据扩散（data diffusion），这个必需的过程能为节点提供所需的信息，保证共识算法正确决策。这些决策能推动该区块链向前演进，因为节点之间的共识可确保所有交易都得到检验和验证，并进一步被公开透明地纳入到新的区块中。</p>
+<p>Cardano 的共识协议是去中心化的 <a href="https://iohk.io/en/research/library/papers/ouroboros-praosan-adaptively-securesemi-synchronous-proof-of-stake-protocol/">Ouroboros Praos</a>。通过对协议<a href="https://iohk.io/en/blog/posts/2021/03/04/not-long-till-d-0-day/">参数 d</a> 执行一系列修改，Cardano 已经从之前的联合式 Ouroboros Classic 协议迁移到了 Praos 协议。Ouroboros Praos 的安全性是有高度保证的，其基础是许多在顶级网络安全和加密技术会议与期刊中经受过同行评议的研究论文。</p>
+<p>网络性能会影响该系统整体工作的速度。其中包括以下指标：</p>
+<ul>
+<li>吞吐量（传输的数据量）</li>
+<li>及时性（纳入区块的时间）</li>
+</ul>
+<p>这两项要求是互相矛盾的。当我们已能最高效地使用生成的区块时，我们可以尽可能最大地提升吞吐量。反过来，这意味着要有足够的缓冲来掩盖延迟，这能减缓全球分布式系统的不便。</p>
+<p>更多缓冲通常意味着能更好地使用区块（及网络），但其代价是当系统过度饱和时延迟（即纳入到链中的时间）会更长。</p>
+<h2 id="区块预算">区块预算</h2>
+<p>要理解 Cardano 执行交易和脚本的速度，我们首先应该定义区块预算（block budget）的概念。Cardano 的区块大小目前限制为最大 64 KB，这个参数的设计平衡考虑了优良的网络利用率与尽可能小的交易延迟。单个区块可能会包含多种不同的交易，包括使用 Plutus 脚本的交易（智能合约）、native token、元数据、基本 ADA 交易（支付）。类似地，目前单个交易的大小规模限制在最大 16KB。这能确保单个区块总是包含多个交易（至少 4 个，但通常会多得多），由此提升整体的交易吞吐量。</p>
+<p>区块时间预算也是一个重要属性，这是指用于处理单个区块中所有交易可用的时间，这个时间长度是固定的。这分为用于执行 Plutus 脚本的时间和用于执行其它交易的时间。这个属性能确保使用 Plutus 脚本的交易不会垄断所有可用的时间预算，因此该系统总是可以在包含 Plutus 脚本的区块中处理基本支付。用于生成每个区块的总时间预算（包括网络连接成本）设置为 1 秒，其中用于执行 Plutus 脚本的可用时间预算大约为 50 毫秒。在实践中，这个参数是相当宽松的——基准测试已经表明：在参考系统上，许多真实脚本的执行时间都小于 1 毫秒。</p>
+<p>区块时间预算目前设置为 1 秒。出于安全考虑，Praos 共识协议会在有可能加到链上的区块中选择小部分（二十分之一）。那么在当前的协议参数下，最大交易吞吐量（简单交易）大约为每秒 11 笔交易（11 TPS）。很显然，不同交易的数据量大小不一样，也具有不同的有效负载。举个例子，单笔交易就能最终确定一整轮 Catalyst 投票，转移价值数百万美元的资产。</p>
+<p>正如前面讨论的，每个区块都包含用户通过钱包或命令行工具（CLI）等提交的许多交易。这些交易会被保存在一个临时的内存托管区（即 mempool/内存池），直到它们可被处理并纳入到区块中。当一个区块生成之后，未被处理的交易会被移出内存池，然后新的交易又会加入内存池。通过使用大小固定的内存池，我们可以避免网络在需求旺盛时过载，但这也意味着钱包或应用可能需要重新提交交易。目前内存池的大小设定为 128 KB：即当前区块大小的两倍。这个参数是基于排队模型（queuing model）选取的。</p>
+<h2 id="网络延展">网络延展</h2>
+<p>Ouroboros 的设计目标是有能力处理大量数据以及不同复杂度和大小的交易和脚本。目前来说，使用当前的参数，Cardano 网络平均只能使用大约 25% 的容量。当然，最高效的情况是 Cardano 的容量基本 100% 能用掉（即网络饱和）。虽然许多网络连接方案可能会在这种情况下出问题，但 Ouroboros 和 Cardano 网络的结构设计使其能够公平且高度弹性地应对严重饱和的情况。基准测试分析表明：在 200% 饱和度下，Cardano 的整体性能仍然是有弹性的，不会出现网络故障问题。即使是在 44 倍的压力测试下，整体可用的网络容量依然没有出现问题（但某些交易可能会稍有延迟）。Cardano 网络的工作模式就是这样设计的，使用背压（backpressure）机制来管理整体系统负载。因此，举个例子，尽管某些用户在参与大型 NFT 项目发行时可能会等待更长的交易时间，或可能需要重新提交大批量交易中某些个别交易（或使得 NFT 发行过程持续更长时间），但这并不意味着网络「崩溃了」。这实际上表明 Cardano 网络的表现正符合预期。我们称之为「优雅的降级」，更多详情请参阅<a href="https://hydra.iohk.io/build/7249613/download/1/network-design.pdf">这篇关于网络设计的论文</a>。</p>
+<h2 id="钱包">钱包</h2>
+<p>钱包的作用是代表最终用户向区块链提交支付和其它交易，此外还能用于跟踪区块链状态。钱包提供一大核心服务是：代表用户提交交易、确认交易已经被区块链接受、如果提交没成功便继续重试。也就是说，钱包应该考虑到网络饱和时的背压影响以及其它网络问题的影响（比如暂时断开连接、可能的链分叉等）。钱包分为两种：</p>
+<ul>
+<li>全节点钱包（如 Daedalus），其使用本地计算和网络资源运行一个直接连接至 Cardano 网络的节点。</li>
+<li>轻钱包：其使用共享的计算和网络资源来为大量最终用户提供服务。</li>
+</ul>
+<p>在网络需求很高时（比如 NFT 发售时），这两类钱包可能都会需要重试交易。轻钱包由于会向许多用户共享资源，因此可能需要临时扩展可用的计算和网络资源（包括复制服务端点），这样才能满足用户需求。这种按需扩展类似于公司发布一款受欢迎的新产品时需要临时满足的需求。相对而言，全节点钱包可能不会受到根本性的影响。交易可能会有所延迟，但每个钱包都会有重试提交交易的专属资源，包括其自有的网络连接。类似的原则对 DApp 提供商来说也适用——其在提供特定的网络端点时应该扩展系统资源来满足需求。</p>
+<h2 id="过程优化">过程优化</h2>
+<p>我们自然欢迎 NFT 社区正在发生的创新（和交流）。为了提升用户体验，我们有必要优化开发流程，使得创建 NFT 等过程即使是在系统饱和时也能有效运作。举个例子，许多 NFT 创建者会使用批处理来创建 NFT，这样做的效率更高。</p>
+<p>我们也鼓励 NFT 创造者继续优化流程，以尽可能减少网络拥塞。我们也希望大家都加入到创造者社区的 <a href="https://discord.gg/inputoutput">Discord</a> 讨论中，我们有工程师帮助寻找适合特定案例的最佳匹配方案。</p>
+<p>除了由参数调整提供的灵活性（如有必要可在一个 epoch 内实现），从中长期看，我们还有更进一步的选择。<a href="https://iohk.io/en/blog/posts/2021/09/17/hydra-cardano-s-solution-for-ultimate-scalability/">Hydra</a> 让 Cardano 可以并行执行多个操作，实现更强的可扩展性。<a href="https://www.youtube.com/watch?v=lvMtaixmPwo">state-channel 解决方案</a>可以提升系统吞吐量，同时降低对链上执行的需求。但是，尽管 Hydra 有多个可扩展性用例加持，但它并不能针对性地解决 NFT 创建效率问题。随着 Cardano 继续成熟和发展，我们将继续努力优化网络和管理网络容量。正如我最近在<a href="https://youtu.be/XzdTyV5Jejc?t=736">十月份的月中更新</a>中谈到的那样，随着 Cardano 运行容量增长，我们可以按需调整 Cardano 的参数。比如，我们可以降低区块时间预算、优化 Plutus 脚本的大小和执行时间或降低其执行成本、提升吞吐量。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2110-9cai/" class="post-title gt-a-link">
+                    菜田观察
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

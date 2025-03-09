@@ -1,0 +1,532 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+        <div class="post-list-container">
+    <div class="post-inner">
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2503-Rime/">
+                            <span class="post-title gt-c-content-color-first">如何将特定繁体字词加入Rime输入法候选项</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>我之前成功实现了<a href="https://www.czyouge.xyz/post/2404-rime-jianfanhunshu/">让 Rime 输入法支持简繁混合输入</a>，但实际用下来发现只是徒增烦恼，因为这样会打乱原本手熟的排序，极大地增加输入的时间和精力成本，于是输入法又变成了纯简体版本。</p>
+<p>但最近，因为工作，需要输入「昇」这个特定的繁体字，而简体字版本的 Rime 是无法直接输入这个字的——即使把「昇」加入到自定义词表中也无法实现。</p>
+<p>研究了 2 个晚上，终于在 Claude 的帮助下找到了解决方案。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2025-03-04 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/rime/" class="post-tag">
+                                # RIME
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://czyouge.github.io/post/2503-Rime/" class="post-feature-image"
+                       style="background-image: url('https://czyouge.github.io/post-images/2503-Rime.png')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2412-micro-scifi/">
+                            <span class="post-title gt-c-content-color-first">近期的几篇微科幻：神降、截图、人生游戏、扩展律撞墙、David Mayer</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>下面收录了我最近写的几篇微科幻小说。</p>
+<h2 id="神降">神降</h2>
+<p>仙女座和银河系中几乎每一个能接入超网的智慧生物都知道，地球人快输了，他们很快连他们的母星也会一并失去，毕竟奎宿人从不手下留情。但戴安娜·岳并不知道或者说并不关心，她正忙着按下一个按钮，而这个按钮控制着那台她耗费三百年心力研发的概率机器。</p>
+<p>宇宙开始颤抖，仿佛就连灵魂也会散架。一个不可能事件成真了，依托于信仰之力的神明们降临尘世。</p>
+<p>地球人忽然看到了希望，毕竟奎宿人没有神话。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-12-07 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/ChatGPT/" class="post-tag">
+                                # ChatGPT
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/yzYem7XsU/" class="post-tag">
+                                # AI
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/alien/" class="post-tag">
+                                # 外星人
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/sf/" class="post-tag">
+                                # 科幻
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2411-ginkgo/">
+                            <span class="post-title gt-c-content-color-first">银杏</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>本文是 Eastern Wood 的「未来的365天日历微科幻投稿」十月阶段的入选微科幻。英文版译者是他们的编辑 Xuan。在此分享一下，此处也有其他一些作者的微科幻作品。</p>
+<p>链接：<a href="https://www.easternwood.co/future365-sep/">https://www.easternwood.co/future365-sep/</a></p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-11-13 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/sf/" class="post-tag">
+                                # 科幻
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2410-sci-fi/">
+                            <span class="post-title gt-c-content-color-first">虫族十爪眜睇尔于古战场悼人族死士</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>之前我写的一首科幻打油诗被 Eastern Wood 翻译成英文了，译者是他们的编辑 Xuan。在此分享一下，此处也有其他一些作者的微科幻作品。</p>
+<p>链接：<a href="https://www.easternwood.co/future365-august/">https://www.easternwood.co/future365-august/</a></p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-10-29 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/alien/" class="post-tag">
+                                # 外星人
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/poem/" class="post-tag">
+                                # 诗
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/sf/" class="post-tag">
+                                # 科幻
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2408-Obsidian-LLM/">
+                            <span class="post-title gt-c-content-color-first">如何在Obsidian中使用LLM</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p><strong>转载自<a href="https://www.jiqizhixin.com/articles/2024-09-03-4">机器之心</a>。</strong></p>
+<p>工欲善其事，必先利其器。使用好用的工具可以极大地提升我们生产和学习的效果和效率。今天我们要介绍一套基于 Obsdian 的 AI 工具组合，其中包含部署本地 LLM 的 Ollama 和两个 Obsdian 插件（BMO Chatbot 和 Ollama）。</p>
+<p>这套工具不仅能帮助我们分析笔记、做总结、想标题、写代码，还能帮助我们大开脑洞，为我们续写内容和提供建议。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-10-03 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/Obsidian/" class="post-tag">
+                                # Obsidian
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/yzYem7XsU/" class="post-tag">
+                                # AI
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/tech/" class="post-tag">
+                                # 技术
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://czyouge.github.io/post/2408-Obsidian-LLM/" class="post-feature-image"
+                       style="background-image: url('https://czyouge.github.io/post-images/2408-Obsidian-LLM.png')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2410-Typora2weixin/">
+                            <span class="post-title gt-c-content-color-first">Typora将文章图片上传至微信公众号素材库</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>我参考了这篇文章《<a href="https://www.51cto.com/article/750173.html">利用微信公众号的图片上传接口，创造属于自己的图床功能！</a>》，但它却有两个问题：</p>
+<ol>
+<li>图片不是上传到素材库，而是另一个图片库（虽然无法在素材库管理，但可以用于发图文消息，一般来说也足够使用）；</li>
+<li>上传的图片名称包含了完整的路径名，于是会出现类似这样的文件名：<code>C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\Temp\\\\Typora\\\\typora-icon.png</code> 。冗长而臃肿。</li>
+</ol>
+<p>在 ChatGPT 的帮助下，问题 1 很容易就得到了解决，但问题 2 却很困难。之后我用 Python 简单试了下上传到素材库，发现图像文件名称能成功保持不变。于是我突发奇想，让 ChatGPT 将上面的 Go 程序改写成了 Python 版本，问题 2 就这样得到了解决。原因嘛，我也不清楚。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-10-01 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/Typora/" class="post-tag">
+                                # Typora
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/ChatGPT/" class="post-tag">
+                                # ChatGPT
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/yzYem7XsU/" class="post-tag">
+                                # AI
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://czyouge.github.io/post/2410-Typora2weixin/" class="post-feature-image"
+                       style="background-image: url('https://czyouge.github.io/post-images/2410-Typora2weixin.png')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2408-pura-malum/">
+                            <span class="post-title gt-c-content-color-first">恶童</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h2 id="一">一</h2>
+<p>「小心点！千万不要撞坏了。」王欣在两个壮硕的搬家公司员工前面一脸紧张地不时回头，反复强调着那两个员工抬着的铁皮箱子的重要性。</p>
+<p>但那两个员工却并不介意被一路警告和催促，因为王欣显然有一对漂亮的奶子，在不盖乳罩的背心下面摇来晃去，化为了这份工作中最美丽的景色。</p>
+<p>「小姐，这箱子里是什么嘛？看你紧张成这个样子。」</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-08-04 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/horror/" class="post-tag">
+                                # 恐怖
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/NSFW/" class="post-tag">
+                                # NSFW
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/stories/" class="post-tag">
+                                # 小说
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2406-GanYong/">
+                            <span class="post-title gt-c-content-color-first">甘勇</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h1 id="一">一</h1>
+<p>昨天，在连绵几天的阴雨终于停下来的晚上，甘勇第一次意识到一个女人能够哭得这么伤心。那个女人是他的母亲，他也跟着抽泣地流下眼泪。今天凌晨，死于冰雹的奶奶才刚刚入土。</p>
+<p>今天的天气已经暖和了许多，但太阳仍然还在云层后面，甘勇一个人坐在街沿上，想着奶奶、爷爷、母亲和那个患了艾滋病的父亲，当然还有自己。黑儿趴在他的脚边，在这一场变故之后，这只三岁大的灰色土狗也变得安静了许多，它懂得主人的情绪，知道这个村子都还被掩盖在自然灾难所带来的损失和悲伤之中。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-07-04 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/stories/" class="post-tag">
+                                # 小说
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2406-ollama-obsidian/">
+                            <span class="post-title gt-c-content-color-first">本地部署LLM并集成到Obsidian</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p><a href="https://github.com/ollama/ollama">ollama</a> 是一个非常好用的本地部署 LLM 的工具，适合任何人使用，下载安装即可。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-06-30 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/LLM/" class="post-tag">
+                                # LLM
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/Obsidian/" class="post-tag">
+                                # Obsidian
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/Ollama/" class="post-tag">
+                                # Ollama
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/yzYem7XsU/" class="post-tag">
+                                # AI
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/tech/" class="post-tag">
+                                # 技术
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://czyouge.github.io/post/2406-ollama-obsidian/" class="post-feature-image"
+                       style="background-image: url('https://i.imgur.com/ej4tvXN.png')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://czyouge.github.io/post/2406-prophecy/">
+                            <span class="post-title gt-c-content-color-first">七年预言</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h2 id="2024">2024</h2>
+<p>十字路口，道路已被封锁，一个女人正在无力地抽噎哭泣。在她面前，一滩被碾碎的肉泥正在渐渐冷却。</p>
+<p>这个场景吸引了周围数十个手机镜头的关注，它正被那些镜头之后的传感器转换成电子信号，之后再被传输到网络上。</p>
+<p>魏兴旭走下救护车，眉头皱起。这是他这个月第三次清理车祸现场，每一次都是一场折磨，而这一次还是一个孩子。一个九岁的孩子。</p>
+<p>这个九岁孩子的身躯已经支离破碎，在冷风中的路面上铺出了一条血肉构成的轮胎印迹；未被碾压的四肢散落在那条印迹的两边，已被交警用白布遮掩。</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2024-06-11 ·
+                        </time>
+                        
+                            <a href="https://czyouge.github.io/tag/4EdQ3vff2/" class="post-tag">
+                                # 奇幻
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/652sTWmBNI/" class="post-tag">
+                                # 末日
+                            </a>
+                        
+                            <a href="https://czyouge.github.io/tag/stories/" class="post-tag">
+                                # 小说
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+    </div>
+</div>
+
+        <div class="pagination-container">
+    
+    
+        <a href="https://czyouge.github.io/page/2" class="prev-page gt-a-link">下一页</a>
+    
+</div>
+
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

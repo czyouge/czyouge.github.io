@@ -1,0 +1,221 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>本地部署LLM并集成到Obsidian | 虫子游戈</title>
+
+<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-202728855-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            虫子游戈
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/myworks" class="menu gt-a-link">
+                            作品
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            推荐
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    本地部署LLM并集成到Obsidian
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-06-30 ·
+                    </time>
+                    
+                        <a href="https://czyouge.github.io/tag/LLM/" class="post-tags">
+                            # LLM
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/Obsidian/" class="post-tags">
+                            # Obsidian
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/Ollama/" class="post-tags">
+                            # Ollama
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/yzYem7XsU/" class="post-tags">
+                            # AI
+                        </a>
+                    
+                        <a href="https://czyouge.github.io/tag/tech/" class="post-tags">
+                            # 技术
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p><a href="https://github.com/ollama/ollama">ollama</a> 是一个非常好用的本地部署 LLM 的工具，适合任何人使用，下载安装即可。</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://i.imgur.com/ej4tvXN.png" alt="" loading="lazy"></figure>
+<h2 id="安装-llm">安装 LLM</h2>
+<p>我安装了两个大模型：8B 版本的 Llama 3 和 27B 版本的 Gemma 2。为此，分别运行：</p>
+<p><code>ollama run llama3</code> 和 <code>ollama run gemma2:27b</code></p>
+<p>之后，我们可以需要一个方便使用的交互界面。我选择了 <a href="https://github.com/open-webui/open-webui">Open WebUI</a>，使用 docker 安装：</p>
+<pre><code>docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+</code></pre>
+<p>如果想使用英伟达 GPU 来驱动 Open WebUI，可以：</p>
+<pre><code>docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
+</code></pre>
+<p>之后只需在浏览器打开 http://localhost:3000/ 即可使用，界面与 ChatGPT 相当类似：</p>
+<figure data-type="image" tabindex="2"><img src="https://i.imgur.com/hsC6sJc.png" alt="" loading="lazy"></figure>
+<h2 id="集成到-obsidian">集成到 Obsidian</h2>
+<p>首先，在 Obsidian 的社区插件市场下载并启用 Ollama 插件，然后配置好你想使用的指令和模型。配置完成后记得重启一次 Obsidian，如此才能生效。</p>
+<figure data-type="image" tabindex="3"><img src="https://i.imgur.com/z3xA6jM.png" alt="" loading="lazy"></figure>
+<p>之后，在你需要使用 LLM 的文档中直接点击 <code>Ctrl+P</code> 或选中文本后 <code>Ctrl+P</code> 唤起命令工具，搜索你的命令名称，如上图中的「汉语总结」，调用即可。</p>
+<figure data-type="image" tabindex="4"><img src="https://i.imgur.com/9yAVvBh.gif" alt="" loading="lazy"></figure>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://czyouge.github.io/post/2406-prophecy/" class="post-title gt-a-link">
+                    七年预言
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        ©虫子游戈
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
