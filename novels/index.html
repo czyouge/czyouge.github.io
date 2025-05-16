@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小说作品-虫子游戈</title>
+  
+  <!-- Google Analytics 代码 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z3PHKTB0H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z3PHKTB0H');
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #ffffff;
+      line-height: 1.6;
+      background-image: url("https://www.czyouge.xyz/images/background.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      position: relative;
+    }
+    
+    /* 半透明遮罩，让文字更易读 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* 深色半透明背景 */
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      padding: 40px 0;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    
+    .subtitle {
+      font-size: 1.3rem;
+      color: #a5b4fc;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    
+    .novels-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    
+    .novel-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .novel-card {
+      background-color: rgba(30, 30, 40, 0.7);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: row;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      height: 100%;
+    }
+    
+    .novel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      background-color: rgba(40, 40, 60, 0.8);
+    }
+    
+    .novel-cover {
+      width: 150px;
+      height: 200px; /* 3:4比例 */
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .novel-info {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    
+    .novel-title {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .novel-description {
+      color: #e0e0e0;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding: 30px 0;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* 响应式调整 */
+    @media (max-width: 1200px) {
+      .novels-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 900px) {
+      .novels-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .novel-card {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .novel-card {
+        flex-direction: column;
+      }
+      
+      .novel-cover {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>小说作品</h1>
+      <p class="subtitle">虫子游戈</p>
+    </header>
+
+    <main class="novels-container">
+
+        <a href="https://www.czyouge.xyz/post/2408-pura-malum/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://www.czyouge.xyz/images/book.png" alt="恶童" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">恶童</h2>
+                <p class="novel-description">2024 年 8 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2406-GanYong/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://www.czyouge.xyz/images/book.png" alt="甘勇" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">甘勇</h2>
+                <p class="novel-description">2024 年 7 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2406-prophecy/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://www.czyouge.xyz/images/book.png" alt="七年预言" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">七年预言</h2>
+                <p class="novel-description">2024 年 6 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2401-trial/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://www.czyouge.xyz/images/book.png" alt="审判" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">审判</h2>
+                <p class="novel-description">2024 年 1 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2312-huaiju/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://www.czyouge.xyz/images/book.png" alt="坏疽" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">坏疽</h2>
+                <p class="novel-description">2023 年 12 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2311-xi/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://czyouge.github.io/post-images/1700714590235.png" alt="夕" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">夕</h2>
+                <p class="novel-description">2023 年 11 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2307-sex-chatbot/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://czyouge.github.io/post-images/1690253061014.png" alt="色情聊天机器人简史" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">色情聊天机器人简史</h2>
+                <p class="novel-description">2023 年 7 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2307-induced-dream/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://www.czyouge.xyz/images/book.png" alt="美梦诱发剂" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">美梦诱发剂</h2>
+                <p class="novel-description">2023 年 7 月</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="https://www.czyouge.xyz/post/2306-Sanya/" class="novel-link">
+            <article class="novel-card">
+              <img src="https://czyouge.github.io/post-images/1686386599901.jpg" alt="三亚寻仙记" class="novel-cover">
+              <div class="novel-info">
+                <h2 class="novel-title">三亚寻仙记</h2>
+                <p class="novel-description">2023 年 6 月</p>
+              </div>
+            </article>
+          </a>
+
+      <a href="https://www.czyouge.xyz/post/2209-orange-cat-girl/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/orangecat.png" alt="火山脚下的橘猫少女" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">火山脚下的橘猫少女</h2>
+            <p class="novel-description">2022 年 5 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2201-Prince-of-Purification/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="净化王子" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">净化王子</h2>
+            <p class="novel-description">2022 年 1 月</p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://read.douban.com/column/36429383/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/historyofuniverse.png" alt="天之史，何人书？" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">天之史，何人书？</h2>
+            <p class="novel-description">豆瓣阅读，2021 年 8 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2106-tiantouwawa/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/ghostbaby.png" alt="舔头娃娃" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">舔头娃娃</h2>
+            <p class="novel-description">2021 年 6 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2106-tangping/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="观音桥躺平者" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">观音桥躺平者</h2>
+            <p class="novel-description">2021 年 6 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2007-memoryof2030/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="2030回忆漫谈" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">2030回忆漫谈</h2>
+            <p class="novel-description">2020 年 7 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2003-strangedeadman/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="被尿憋死的人" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">被尿憋死的人</h2>
+            <p class="novel-description">2020 年 2 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2002-jueshi/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="绝食" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">绝食</h2>
+            <p class="novel-description">2020 年 2 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2002-monsterinshenzhen/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="深圳怪兽" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">深圳怪兽</h2>
+            <p class="novel-description">2020 年 2 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2002-zuojia/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="作家" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">作家</h2>
+            <p class="novel-description">2020 年 2 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/2002-giant/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="巨人" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">巨人</h2>
+            <p class="novel-description">2020 年 2 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/1912-lastwish/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="最后的愿望" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">最后的愿望</h2>
+            <p class="novel-description">2019 年 12 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/1911-graduationtrip/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="毕业旅行" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">毕业旅行</h2>
+            <p class="novel-description">2019 年 11 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/1910-therewardforcrazy/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="空巢狂人的奖赏" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">空巢狂人的奖赏</h2>
+            <p class="novel-description">2019 年 10 月</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/1910-timetravller/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="时间跳跃者" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">时间跳跃者</h2>
+            <p class="novel-description">2019 年 10 月</p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://read.douban.com/column/31540602/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/qm.jpg" alt="量子魔法师" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">量子魔法师</h2>
+            <p class="novel-description">豆瓣阅读,2019 年 8 月</p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://read.douban.com/ebook/36465428/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/ghostgirl.jpg" alt="幽灵女孩" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">幽灵女孩</h2>
+            <p class="novel-description">豆瓣阅读</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://read.douban.com/ebook/36136123/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/bitcoin.jpg" alt="这里有十六个比特币" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">这里有十六个比特币</h2>
+            <p class="novel-description">豆瓣阅读</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://read.douban.com/ebook/36173639/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/scwt.jpg" alt="生存委托" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">生存委托</h2>
+            <p class="novel-description">豆瓣阅读</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://read.douban.com/ebook/30570619/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/lovecode.jpg" alt="爱情激活口令" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">爱情激活口令</h2>
+            <p class="novel-description">豆瓣阅读</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://read.douban.com/ebook/127153614/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/okQueen.jpg" alt="好的，女王陛下" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">好的，女王陛下</h2>
+            <p class="novel-description">豆瓣阅读</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://read.douban.com/ebook/124983559/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/umr.jpg" alt="守门人" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">守门人</h2>
+            <p class="novel-description">豆瓣阅读</p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://www.czyouge.xyz/post/1908-highestpermission/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="最高权限" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">最高权限</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://czyouge.github.io/post/1905-monsterandlove/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="转角遇到爱与怪兽" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">转角遇到爱与怪兽</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://czyouge.github.io/post/1905-dealine/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="截稿日" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">截稿日</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+
+      <a href="https://czyouge.github.io/post/1904-testforhappyness/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="幸福实践考试" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">幸福实践考试</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1904-backdoor/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="后门" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">后门</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1904-cdlongday/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="成都永昼" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">成都永昼</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1901-oldpeople/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="老人小镇" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">老人小镇</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1812-bigass/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="荒野巨臀" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">荒野巨臀</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1807-dyingman/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="将死之人" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">将死之人</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1805-superstar/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="超级巨星" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">超级巨星</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1708-bzyhszw/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="爆炸与黑色指纹" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">爆炸与黑色指纹</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1707-whale/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="巨鲸，我的母亲" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">巨鲸，我的母亲</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1706-suxiang/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="塑像" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">塑像</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1704-Phil/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="上帝的菲尔" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">上帝的菲尔</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1703-agui/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="阿圭" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">阿圭</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1702-nanji/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="南极" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">南极</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://czyouge.github.io/post/1605-machineofLife/" class="novel-link">
+        <article class="novel-card">
+          <img src="https://www.czyouge.xyz/images/book.png" alt="生命机器" class="novel-cover">
+          <div class="novel-info">
+            <h2 class="novel-title">生命机器</h2>
+            <p class="novel-description"></p>
+          </div>
+        </article>
+      </a>
+
+    </main>
+
+    <footer>
+      <p>© 虫子游戈</p>
+    </footer>
+  </div>
+</body>
+</html>
