@@ -1,201 +1,156 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>友情链接-虫子游戈</title>
 
-<title>友情链接 - 虫子游戈</title>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-0Z3PHKTB0H'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0Z3PHKTB0H');
+  </script>
 
-<link rel="shortcut icon" href="https://czyouge.github.io/favicon.ico?v=1741500036821">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --card-border: #e0e0e0;
+    }
 
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://czyouge.github.io/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #eeeeee;
+        --card-bg: #1e1e1e;
+        --card-border: #333333;
+      }
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
 
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202728855-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #888;
+    }
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 20px;
+    }
 
-        gtag('js', new Date());
-        gtag('config', 'UA-202728855-1');
-    </script>
+    .friend-link {
+      display: flex;
+      align-items: center;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
+    .friend-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
 
+    .friend-link img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .friend-info h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      color: var(--text-color);
+    }
+
+    .friend-info p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .friend-link a {
+      display: flex;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 响应式：小屏幕改为上下布局 */
+    @media (max-width: 600px) {
+      .friend-link {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .friend-link img {
+        margin-right: 0;
+        margin-bottom: 12px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-<div class="main gt-bg-theme-color-first">
-        <div class="main-content">
-            <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            虫子游戈
+
+  <header>
+    <h1>友情链接</h1>
+    <p>❤️</p>
+  </header>
+
+  <div class="container">
+
+    <div class="friend-link">
+        <a href="https://www.jiqizhixin.com/" target="_blank" rel="noopener">
+          <img src="https://czyouge.github.io/images/jiqizhixinlogo.jpg" alt="机器之心">
+          <div class="friend-info">
+            <h3>机器之心</h3>
+            <p>国内领先的人工智能媒体和产业信息服务平台</p>
+          </div>
+        </a>
+      </div>
+
+    <div class="friend-link">
+      <a href="https://sogola.com/" target="_blank" rel="noopener">
+        <img src="https://sogola.com/images/avatar.jpg" alt="王小嗨">
+        <div class="friend-info">
+          <h3>王小嗨</h3>
+          <p>A Marxist inside</p>
         </div>
+      </a>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/myworks" class="menu gt-a-link">
-                            作品
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/friends" class="menu gt-a-link">
-                            推荐
-                        </a>
-                    
-                </div>
-            
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1741500036821" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
 
-            <div class="post-container">
-                <div class="post-detail">
-                    <article>
-                        <!-- <div class="post-content-wrapper"> -->
-                            <div class="post-content">
-                                <div class="friends-desc">
-                                    <h2 id="有趣的网站">有趣的网站</h2>
-<ul>
-<li><a href="https://phys.org/"><strong>phys.org</strong></a>：很棒的科技报道网站。</li>
-<li><a href="https://www.jiqizhixin.com/"><strong>机器之心</strong></a>：专业的人工智能信息服务平台。</li>
-<li><a href="https://chinadigitaltimes.net/"><strong>中国数字时代</strong></a>：一个收集和整理中文新闻及评论的网站。</li>
-<li><a href="https://https://lojban.org/"><strong>lojban.org</strong></a>：逻辑语组织网站。</li>
-<li><a href="https://www.instructables.com/"><strong>instructables</strong></a>：DIY 和技能分享网站。</li>
-</ul>
-<h2 id="平台与服务">平台与服务</h2>
-<ul>
-<li><a href="https://joinmastodon.org/"><strong>Mastodon</strong></a>：一个免费开源的去中心化的分布式微博客社交网络。</li>
-<li><a href="https://matters.news"><strong>Matters</strong></a>：去中心化的寫作社群與內容生態。</li>
-<li><a href="https://zeronet.io/"><strong>ZeroNet</strong></a>：零网，一个分布式网络系统。</li>
-<li><strong><a href="https://neodb.social/">NeoDB</a></strong>：分布式影/音/书/游标记服务，基于 Mastodon。<a href="https://neodb.social/users/czyouge@mastodon.social/">我标记的书影音</a>。</li>
-</ul>
+  </div>
 
-                                </div>
-                                <h3 id="linklist">友链列表</h3>
-                                
-                                    
-                                        <div class="friend-box">
-                                            <img class="friend-avatar" src="https://sogola.com/images/avatar.jpg">
-                                            <div class="flink-info">
-                                                
-                                                        <a class="gt-c-content-color-first" href="https://sogola.com/" target="_blank">王小嗨</a>
-                                                        
-                                                <br />
-                                                <div class="flink-info-desc gt-c-content-color-first">
-                                                    A Marxist inside
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                
-                            </div>
-                        <!-- </div> -->
-                    </article>
-                </div>
-                
-            </div>
-
-
-
-            <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">一个讲故事的人类</div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    <div class="footer-info">
-        ©虫子游戈
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://czyouge.github.io/atom.xml" target="_blank">RSS</a></a>
-    </div>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
-        </div>
-    </div>
 </body>
-
 </html>
