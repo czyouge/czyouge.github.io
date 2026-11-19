@@ -1,1 +1,9 @@
-{{ if gt .TotalPages 1 }}<nav class="pagination" aria-label="分页">{{ with .Prev }}<a href="{{ .URL }}">上一页</a>{{ end }}<span>第 {{ .PageNumber }} / {{ .TotalPages }} 页</span>{{ with .Next }}<a href="{{ .URL }}">下一页</a>{{ end }}</nav>{{ end }}
+{{ if gt .TotalPages 1 }}
+{{ $start := add (mul (div (sub .PageNumber 1) 10) 10) 1 }}
+{{ $end := math.Min (add $start 9) .TotalPages | int }}
+<nav class="pagination" aria-label="分页">
+  {{ if gt $start 1 }}<a class="pagination-group" href="{{ (index .Pagers (sub $start 11)).URL }}" aria-label="上10页">上10页</a>{{ else }}<span class="pagination-group" aria-disabled="true">上10页</span>{{ end }}
+  <div class="pagination-pages">{{ range .Pagers }}{{ if and (ge .PageNumber $start) (le .PageNumber $end) }}<a href="{{ .URL }}" aria-label="第{{ .PageNumber }}页"{{ if eq .PageNumber $.PageNumber }} aria-current="page"{{ end }}>{{ .PageNumber }}</a>{{ end }}{{ end }}</div>
+  {{ if lt $end .TotalPages }}<a class="pagination-group" href="{{ (index .Pagers $end).URL }}" aria-label="下10页">下10页</a>{{ else }}<span class="pagination-group" aria-disabled="true">下10页</span>{{ end }}
+</nav>
+{{ end }}
