@@ -8,10 +8,12 @@ class Document(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
         self.ids, self.assets, self.refresh = set(), [], False
+        self.avatar = None
         self.feed(text)
     def handle_starttag(self, tag, attributes):
         a = dict(attributes)
         if 'id' in a: self.ids.add(a['id'])
+        if tag == 'img' and 'brand-avatar' in a.get('class', '').split(): self.avatar = a.get('src')
         if tag in ('img', 'source', 'video', 'script') and a.get('src'): self.assets.append(a['src'])
         if tag == 'link' and a.get('rel') == 'stylesheet': self.assets.append(a['href'])
         if tag == 'meta' and a.get('http-equiv', '').lower() == 'refresh': self.refresh = True
@@ -29,6 +31,14 @@ def main():
     root = Path(__file__).resolve().parents[1]
     public = root / args.public
     failures = []
+    homepage = Document((public/'index.html').read_text(encoding='utf-8'))
+    avatar_path = urlsplit(homepage.avatar or '').path
+    if not avatar_path or avatar_path.startswith('/blog/'):
+        failures.append('Avatar must be published outside the retired /blog/ project route')
+    else:
+        avatar_file = public/unquote(avatar_path).lstrip('/')
+        if not avatar_file.is_file() or avatar_file.read_bytes() != (root/'static/blog/avatar.png').read_bytes():
+            failures.append('Published avatar does not match static/blog/avatar.png')
     cname = public/'CNAME'
     if not cname.exists() or cname.read_text(encoding='utf-8').strip() != args.host:
         failures.append('Incorrect CNAME for ' + args.host)

@@ -1,0 +1,6 @@
+{{- /* Publish outside /blog/: GitHub Pages reserves that path for the old project. */ -}}
+{{- $source := os.ReadFile "static/blog/avatar.png" -}}
+{{- $name := "site-avatar.png" -}}
+{{- if strings.HasPrefix $source "\xff\xd8\xff" -}}{{- $name = "site-avatar.jpg" -}}{{- end -}}
+{{- $avatar := resources.FromString $name $source -}}
+{{- return ($avatar | fingerprint "sha256") -}}

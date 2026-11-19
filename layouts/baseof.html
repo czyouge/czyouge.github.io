@@ -12,8 +12,9 @@
   <meta property="og:description" content="{{ .Description | default site.Params.description }}">
   <meta property="og:url" content="{{ $canonical }}">
   <meta property="og:type" content="{{ if eq .Section "posts" }}article{{ else }}website{{ end }}">
-  <link rel="icon" type="image/png" href="{{ "blog/avatar.png" | relURL }}">
-  <meta property="og:image" content="{{ "blog/avatar.png" | absURL }}">
+  {{ $avatar := partial "site-avatar.html" . }}
+  <link rel="icon" href="{{ $avatar.RelPermalink }}">
+  <meta property="og:image" content="{{ $avatar.Permalink }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "rss.xml" | relURL }}">
   <link rel="stylesheet" href="{{ "assets/site.css" | relURL }}">
   <script src="{{ "assets/site.js" | relURL }}" defer></script>
@@ -30,7 +31,7 @@
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header wrap">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="虫子游戈首页"><img class="brand-avatar" src="{{ "blog/avatar.png" | relURL }}" width="38" height="38" alt=""><span>{{ site.Title }}</span></a>
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="虫子游戈首页"><img class="brand-avatar" src="{{ $avatar.RelPermalink }}" width="38" height="38" alt=""><span>{{ site.Title }}</span></a>
     <nav aria-label="主导航">{{ range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</nav>
     <div class="header-actions"><a class="search-link" href="{{ "/search/" | relURL }}" aria-label="搜索文章"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>搜索</span></a><button class="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">◐</button></div>
   </header>
