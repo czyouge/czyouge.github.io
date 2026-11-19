@@ -7,6 +7,8 @@
 - **写文章**：`content/posts/`。
 - **改独立页面**：`content/pages/`，例如 `about.md`、`friends.md`。
 - **放图片**：`static/post-images/`，正文使用 `/post-images/图片名.png` 引用。
+
+`static/` 是本地素材目录，发布后的网址不包含 `static`。例如本地 `static/blog/avatar.png` 在模板中写作 `{{ "blog/avatar.png" | relURL }}`，在 Markdown 中写作 `/blog/avatar.png`。
 - **本地预览**：双击根目录的 **预览博客.cmd**，浏览器打开 <http://localhost:1313/>。关闭该命令窗口即可停止预览。
 - **新建文章**：双击 **新建文章.cmd**，输入标题和永久地址标识；或直接复制现有 Markdown 文件修改。
 - **首次上线**：见 [上线与回退说明](docs/上线与回退.md)。
