@@ -1,0 +1,1 @@
+{{ define "main" }}<section class="page-heading"><p class="eyebrow">按标签阅读</p><h1>{{ .Title }}</h1><p>共 {{ len .RegularPages }} 篇文章</p></section><section>{{ $pager := .Paginate .RegularPages }}{{ range $pager.Pages }}{{ partial "post-card.html" . }}{{ end }}{{ partial "pagination.html" $pager }}</section>{{ end }}

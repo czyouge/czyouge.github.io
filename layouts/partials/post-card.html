@@ -1,0 +1,7 @@
+<article class="post-row">
+  <div class="post-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>{{ if .Weight }}<span class="pinned">置顶</span>{{ end }}</div>
+  <div class="post-info"><div class="post-tags">{{ range first 3 (.GetTerms "tags") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div>
+  <h2><a href="{{ partial "post-url.html" . }}">{{ .Title }}</a></h2>
+  <p>{{ .Description | default (.Summary | plainify) | markdownify | plainify | truncate 120 }}</p>
+  <span class="reading-time">{{ .ReadingTime }} 分钟阅读</span></div>
+</article>

@@ -1,0 +1,8 @@
+{{- $id := .Anchor -}}
+{{- $headings := index hugo.Data.legacy_headings (.Page.Params.legacy_key | default "") -}}
+{{- if and $headings (lt .Ordinal (len $headings)) -}}
+  {{- $old := index $headings .Ordinal -}}
+  {{- with $old.id -}}{{- $id = . -}}{{- end -}}
+{{- end -}}
+{{- if ne $id .Anchor -}}<span id="{{ .Anchor }}" class="heading-alias" aria-hidden="true"></span>{{- end -}}
+<h{{ .Level }} id="{{ $id }}">{{ .Text | safeHTML }}<a class="heading-link" href="#{{ $id }}" aria-label="链接到此小节">#</a></h{{ .Level }}>

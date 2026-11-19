@@ -1,0 +1,39 @@
+# Install as .github/workflows/hugo-mirror.yml in czyouge/blog.
+# Disable its old Gmeek.yml workflow once the source migration is published.
+name: Publish unified Hugo blog
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: czyouge/czyouge.github.io
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned Hugo
+        run: python scripts/install_hugo.py
+      - name: Build the same source for the legacy domain
+        run: python scripts/build.py --mirror
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public-blog
+      - uses: actions/deploy-pages@v4
+        id: deployment

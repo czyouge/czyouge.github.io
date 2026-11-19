@@ -1,0 +1,10 @@
+/public/
+/public-blog/
+/.preview/
+/local-drafts/
+/resources/
+/.hugo_build.lock
+/.tools/
+__pycache__/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,3 @@
+{{- $posts := where (where site.RegularPages "Section" "posts") "Params.hidden" "ne" true -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rss version="2.0"><channel><title>{{ site.Title }}</title><link>{{ site.Params.canonicalBase }}/</link><description>{{ site.Params.description }}</description><language>zh-CN</language>{{ range first 30 $posts }}<item><title>{{ .Title }}</title><link>{{ .Params.original_url | default .Permalink }}</link><guid>{{ .Params.original_url | default .Permalink }}</guid><pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate><description>{{ partial "legacy-content.html" . | html }}</description></item>{{ end }}</channel></rss>

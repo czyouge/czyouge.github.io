@@ -1,0 +1,7 @@
+{{ define "main" }}
+<article class="article-shell">
+  <header class="article-header"><div class="post-tags">{{ range .GetTerms "tags" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div><h1>{{ .Title }}</h1>{{ if eq .Section "posts" }}<p class="article-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006 年 1 月 2 日" }}</time><span>·</span>{{ .ReadingTime }} 分钟阅读</p>{{ end }}</header>
+  <div class="article-layout"><div class="prose">{{ partial "legacy-content.html" . }}{{ with .Params.discussion_url }}<p class="source-discussion"><a href="{{ . }}">在 GitHub 查看原文讨论</a></p>{{ end }}</div>{{ if and (eq .Section "posts") (gt (len .Fragments.Headings) 0) }}<aside class="toc"><details open><summary>本文目录</summary>{{ .TableOfContents }}</details></aside>{{ end }}</div>
+  {{ if eq .Section "posts" }}<div class="article-end"><span>写于 {{ .Date.Format "2006.01.02" }}</span><a href="{{ "/archives/" | relURL }}">浏览更多文章</a></div>{{ end }}
+</article>
+{{ end }}

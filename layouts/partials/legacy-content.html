@@ -1,0 +1,6 @@
+{{- $content := .Content -}}
+{{- if strings.HasPrefix (.Params.legacy_key | default "") "gridea-" -}}
+  {{- /* markdown-it used fn1/fnref1; Goldmark uses fn:1/fnref:1. */ -}}
+  {{- $content = replaceRE `((id|href)="#?fn(ref)?):([0-9]+)` `${1}${4}` $content -}}
+{{- end -}}
+{{- return ($content | safeHTML) -}}

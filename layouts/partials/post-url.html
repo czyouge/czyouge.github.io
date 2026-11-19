@@ -1,0 +1,3 @@
+{{- $url := .Params.original_url | default .RelPermalink -}}
+{{- if hugo.IsServer -}}{{- $url = .RelPermalink -}}{{- end -}}
+{{- return $url -}}

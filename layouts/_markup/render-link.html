@@ -1,0 +1,3 @@
+{{- $url := .Destination -}}
+{{- if hugo.IsServer -}}{{- $url = replaceRE `^https?://(www\.czyouge\.xyz|blog\.czyouge\.xyz|czyouge\.github\.io)` "" $url -}}{{- end -}}
+<a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>

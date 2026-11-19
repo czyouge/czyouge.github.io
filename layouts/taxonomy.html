@@ -1,0 +1,1 @@
+{{ define "main" }}<section class="page-heading"><p class="eyebrow">文字的不同侧面</p><h1>所有标签</h1></section><div class="tag-cloud">{{ range .Data.Terms.Alphabetical }}<a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span>{{ .Count }}</span></a>{{ end }}</div>{{ end }}

@@ -1,0 +1,1 @@
+{{ if gt .TotalPages 1 }}<nav class="pagination" aria-label="分页">{{ with .Prev }}<a href="{{ .URL }}">上一页</a>{{ end }}<span>第 {{ .PageNumber }} / {{ .TotalPages }} 页</span>{{ with .Next }}<a href="{{ .URL }}">下一页</a>{{ end }}</nav>{{ end }}

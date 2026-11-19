@@ -1,0 +1,5 @@
+{{ define "main" }}
+<section class="hero"><div class="hero-copy"><p class="eyebrow">故事 · 翻译 · 随想</p><h1>在宇宙的角落，<br>写下<span>一点回声。</span></h1><p class="hero-description">{{ site.Params.subtitle }}。<br>这里有虚构的世界，也有真实生活留下的片段。</p><div class="hero-links"><a class="button" href="{{ "/novels/" | relURL }}">读一点故事</a><a class="text-link" href="{{ "/about/" | relURL }}">认识一下作者</a></div></div><div class="orbit-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="planet"></span><span class="satellite"></span><span class="orbit-caption">欢迎来到这个㮟㮟角角</span></div></section>
+{{ $posts := where (where site.RegularPages "Section" "posts") "Params.hidden" "ne" true }}
+<section class="journal"><div class="section-title"><div><p class="eyebrow">散落的文字</p><h2>最近更新</h2></div><a href="{{ "/archives/" | relURL }}">全部 {{ len $posts }} 篇</a></div>{{ $pager := .Paginate $posts }}{{ range $pager.Pages }}{{ partial "post-card.html" . }}{{ end }}{{ partial "pagination.html" $pager }}</section>
+{{ end }}

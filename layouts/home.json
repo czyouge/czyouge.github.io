@@ -1,0 +1,5 @@
+{{- $items := slice -}}
+{{- range where (where site.RegularPages "Section" "posts") "Params.hidden" "ne" true -}}
+  {{- $items = $items | append (dict "title" .Title "url" (partial "post-url.html" .) "date" (.Date.Format "2006.01.02") "tags" (.Params.tags | default slice) "text" .Plain "summary" (.Description | default (.Summary | plainify))) -}}
+{{- end -}}
+{{- $items | jsonify -}}
