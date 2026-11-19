@@ -8,6 +8,7 @@ draft: false
 legacy_key: gmeek-p2
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/gu-shi.html
+canonical_url: https://www.czyouge.xyz/post/gu-shi.html
 description: AI 时代，人类所能拥有的，唯有故事。
 discussion_url: https://github.com/czyouge/blog/issues/2
 ---

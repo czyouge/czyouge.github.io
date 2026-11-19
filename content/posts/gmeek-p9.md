@@ -8,6 +8,7 @@ draft: false
 legacy_key: gmeek-p9
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/uv-de-yi-xie-ji-ben-yong-fa.html
+canonical_url: https://www.czyouge.xyz/post/uv-de-yi-xie-ji-ben-yong-fa.html
 description: '为了解决项目之间的依赖冲突，使用以下命令创建虚拟环境：
 
 

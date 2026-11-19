@@ -8,6 +8,7 @@ draft: false
 legacy_key: gmeek-p10
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/Notepad%2B%2B-shi-xian-zheng-ze-biao-da-shi-cha-zhao-bing-ti-huan.html
+canonical_url: https://www.czyouge.xyz/post/Notepad%2B%2B-shi-xian-zheng-ze-biao-da-shi-cha-zhao-bing-ti-huan.html
 description: Notepad++ 的宏功能很强大，但很多时候，光是录制宏并不够用。
 discussion_url: https://github.com/czyouge/blog/issues/10
 ---

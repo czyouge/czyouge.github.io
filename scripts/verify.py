@@ -35,7 +35,8 @@ def main():
     for entry in ('post/goodstuff/index.html',):
         if (public/entry).exists(): failures.append('Local-only draft was published: ' + entry)
     inventory = json.loads((root/'data/legacy_urls.json').read_text(encoding='utf-8'))
-    routes = [x for x in inventory if x['host'] == args.host]
+    # Both former sites now live under the single primary hostname.
+    routes = list({x['path']: x for x in inventory}.values())
     anchor_count = 0
     for entry in routes:
         target = output_file(public, entry['path'])
@@ -66,6 +67,8 @@ def main():
     if len(search) != len(expected): failures.append(f'Search count {len(search)} != published articles {len(expected)}')
     known = {item['url'] for item in search}
     if len(known) != len(search): failures.append('Duplicate search URLs')
+    if any(urlsplit(item['url']).netloc == 'blog.czyouge.xyz' for item in search):
+        failures.append('Search still sends readers to the retired hostname')
     print(f'Checked {len(routes)} legacy URLs, {anchor_count} legacy anchors, {len(search)} searchable articles, local assets and XML feeds.')
     for message in sorted(set(failures)): print('FAIL:', message)
     if failures: return 1

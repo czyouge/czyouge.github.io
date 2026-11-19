@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p16
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/di-N%20%2B%201%20-ji-tai-jie.html
+canonical_url: https://www.czyouge.xyz/post/di-N%20%2B%201%20-ji-tai-jie.html
 description: 特别声明：本故事由虫子游戈与 Gemini 2.5 Pro 合作完成。
 discussion_url: https://github.com/czyouge/blog/issues/16
 math: true

@@ -15,6 +15,6 @@ layout: single
 ## 📬 联系我
 
 * Mastodon：[mastodon.social/@czyouge](https://mastodon.social/@czyouge)
-* 博客：[blog.czyouge.xyz](https://blog.czyouge.xyz/)
+* 博客：[www.czyouge.xyz](https://www.czyouge.xyz/)
 * 书影音标记：[NeoDB](https://neodb.social/users/czyouge@mastodon.social)
 * 邮箱：[czyg@protonmail.com](mailto:czyg@protonmail.com)

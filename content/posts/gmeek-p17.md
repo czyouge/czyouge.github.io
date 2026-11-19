@@ -8,6 +8,7 @@ draft: false
 legacy_key: gmeek-p17
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/ru-he-gei-xiao-mi-shou-biao-shua-guo-ji-ban-gu-jian.html
+canonical_url: https://www.czyouge.xyz/post/ru-he-gei-xiao-mi-shou-biao-shua-guo-ji-ban-gu-jian.html
 description: 原来，小米/红米的手环/手表是可以刷机，更换国际版固件的。
 discussion_url: https://github.com/czyouge/blog/issues/17
 ---

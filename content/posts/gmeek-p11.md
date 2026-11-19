@@ -8,6 +8,7 @@ draft: false
 legacy_key: gmeek-p11
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/Notepad%2B%2B-zhong-ying-hun-pai-de-huan-xing-wen-ti.html
+canonical_url: https://www.czyouge.xyz/post/Notepad%2B%2B-zhong-ying-hun-pai-de-huan-xing-wen-ti.html
 description: Notepad++ 是我日常工作的重要利器。
 discussion_url: https://github.com/czyouge/blog/issues/11
 ---

@@ -6,8 +6,7 @@
   <meta name="color-scheme" content="light dark">
   <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
   <meta name="description" content="{{ .Description | default site.Params.description }}">
-  {{ $canonical := printf "%s%s" site.Params.canonicalBase .RelPermalink }}
-  {{ with .Params.original_url }}{{ $canonical = . }}{{ end }}
+  {{ $canonical := partial "canonical-url.html" . }}
   <link rel="canonical" href="{{ $canonical }}">
   <meta property="og:title" content="{{ .Title | default site.Title }}">
   <meta property="og:description" content="{{ .Description | default site.Params.description }}">

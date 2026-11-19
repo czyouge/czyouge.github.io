@@ -37,9 +37,9 @@ draft: true
 
 ## 日常发布
 
-首次迁移上线之后，在 GitHub Desktop 中添加这个本地仓库。此后修改文章、填写提交说明、点击 **Commit to master**，再点击 **Push origin**，主站会自动构建发布。只需维护这一个仓库。
+在 GitHub Desktop 中添加这个本地仓库（E:\Blog\hugo-blog），使用 `master` 分支。此后修改文章、填写提交说明、点击 **Commit to master**，再点击 **Push origin**，主站会自动构建发布。只需维护这一个仓库。
 
-`blog.czyouge.xyz` 继续保留原有 `.html` 链接。第二个仓库只负责兼容发布，读取主仓库源码；不要在它的 `backup/` 或 `docs/` 中继续写文章。默认每小时自动同步一次，也可在它的 Actions 中手动运行 **Publish unified Hugo blog**。GitHub 的定时任务可能延迟，且长期无仓库活动时可能停用，详细处理见上线说明。
+正式入口只有 **https://www.czyouge.xyz/**。原来第二个博客的 17 篇文章也已经迁入主站，保留原来的 `.html` 路径。按你的决定，第二个仓库不再定时同步或维护文章，只保留备份和旧域名的静态跳转入口。日常只编辑、提交本仓库即可。
 
 ## 独立页面
 
@@ -61,7 +61,7 @@ url: /hello/
 - `gridea-` 开头的文件来自本地 Gridea Markdown，`gmeek-` 开头的文件来自新博客备份。前缀只是防止文件重名，不影响网页地址。
 - 已发布内容共 138 个：137 篇文章及一个不显示在文章列表中的作品页。
 - 原有日期、标签、文章地址、图片路径和可检测的旧标题锚点已保留。
-- `original_url` 记录原有规范地址，不要随意更改。
+- `original_url` 记录历史地址；若有 `canonical_url`，它是当前主站地址。不要随意更改已经发布的永久路径。
 - `legacy_key` 关联旧标题锚点。通常保持不动；如果重排旧文章小节，请同步调整 `data/legacy_headings.json`。
 - 旧站独立的排版工具保留在 `/tools/typesetting/`。
 - 两个 RSS 订阅入口 `/rss.xml`、`/atom.xml` 都保留。
@@ -86,7 +86,6 @@ url: /hello/
 
 ```powershell
 python scripts/build.py
-python scripts/build.py --mirror
 ```
 
 GitHub Actions 会运行同样的检查，出现缺失的旧路径、旧锚点、本地资源或损坏的 RSS 时，停止发布。

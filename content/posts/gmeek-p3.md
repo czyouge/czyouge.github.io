@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p3
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/zhong-ying-hun-pai-gong-ju.html
+canonical_url: https://www.czyouge.xyz/post/zhong-ying-hun-pai-gong-ju.html
 description: 我的日常工作经常需要中英混排工具来对文本内容进行格式化处理，之前常用的是在线的[独特工具箱](https://www.dute.org/type-setting)。
 discussion_url: https://github.com/czyouge/blog/issues/3
 ---

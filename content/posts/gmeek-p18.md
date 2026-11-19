@@ -10,6 +10,7 @@ draft: false
 legacy_key: gmeek-p18
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/ru-he-gei-%20RIME%20-pei-zhi-duo-xing-shu-ru-%EF%BC%9F.html
+canonical_url: https://www.czyouge.xyz/post/ru-he-gei-%20RIME%20-pei-zhi-duo-xing-shu-ru-%EF%BC%9F.html
 description: RIME 最大的魅力之一，就是几乎所有功能都可以自定义。
 discussion_url: https://github.com/czyouge/blog/issues/18
 ---

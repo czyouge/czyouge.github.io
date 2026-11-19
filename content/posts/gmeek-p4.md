@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p4
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/ru-he-zai-shou-ji-shang-ben-di-yun-xing-LLM.html
+canonical_url: https://www.czyouge.xyz/post/ru-he-zai-shou-ji-shang-ben-di-yun-xing-LLM.html
 description: '> 基本无用的技能又增加了。'
 discussion_url: https://github.com/czyouge/blog/issues/4
 ---

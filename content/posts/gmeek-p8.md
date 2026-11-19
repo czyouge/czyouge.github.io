@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p8
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/1%20Million%20Citation%21%20How%20Yoshua%20Bengio%20Defined%20an%20Era%20of%20AI.html
+canonical_url: https://www.czyouge.xyz/post/1%20Million%20Citation%21%20How%20Yoshua%20Bengio%20Defined%20an%20Era%20of%20AI.html
 description: 'Computer scientist Yoshua Bengio has made history, becoming the first
   scientist to surpass 1 million citations on Google Scholar.
 

@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p15
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/guo-nian.html
+canonical_url: https://www.czyouge.xyz/post/guo-nian.html
 description: 特别声明：本故事由虫子游戈与 ChatGPT 合作完成。
 discussion_url: https://github.com/czyouge/blog/issues/15
 ---

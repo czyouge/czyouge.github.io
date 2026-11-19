@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p7
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/AI-hui-meng-jian-guo-qu-ma-%EF%BC%9F-jie-mi-da-mo-xing-de-ji-yi-jin-hua-zhi-lu.html
+canonical_url: https://www.czyouge.xyz/post/AI-hui-meng-jian-guo-qu-ma-%EF%BC%9F-jie-mi-da-mo-xing-de-ji-yi-jin-hua-zhi-lu.html
 description: 转载自机器之心《[那天，AI大模型想起了，被「失忆」所束缚的枷锁](https://mp.weixin.qq.com/s/N_iEDFATkdbazXyjzUF2wA)》。
 discussion_url: https://github.com/czyouge/blog/issues/7
 ---

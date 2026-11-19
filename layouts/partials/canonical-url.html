@@ -1,0 +1,1 @@
+{{- return (.Params.canonical_url | default .Params.original_url | default (printf "%s%s" site.Params.canonicalBase .RelPermalink)) -}}

@@ -1,7 +1,7 @@
 name: Build and publish Hugo
 on:
   push:
-    branches: [master, hugo-rebuild]
+    branches: [master]
   pull_request:
     branches: [master]
   workflow_dispatch:

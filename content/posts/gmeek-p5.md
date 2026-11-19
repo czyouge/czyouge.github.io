@@ -8,6 +8,7 @@ draft: false
 legacy_key: gmeek-p5
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/wei-Gmeek-bo-ke-zheng-he-Google%20Analytics.html
+canonical_url: https://www.czyouge.xyz/post/wei-Gmeek-bo-ke-zheng-he-Google%20Analytics.html
 description: '想为 [Gmeek](https://meekdai.com/Gmeek.html) 博客整合 Google Analytics？
 
 

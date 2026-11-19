@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p6
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/ru-guo-AI-neng-xue-hui-yi-qie-%EF%BC%8C-wo-you-shen-me-yi-yi-%EF%BC%9F.html
+canonical_url: https://www.czyouge.xyz/post/ru-guo-AI-neng-xue-hui-yi-qie-%EF%BC%8C-wo-you-shen-me-yi-yi-%EF%BC%9F.html
 description: 最近这些年，人工智能（AI）发展得太快了，也夺走了一些工作岗位。
 discussion_url: https://github.com/czyouge/blog/issues/6
 ---

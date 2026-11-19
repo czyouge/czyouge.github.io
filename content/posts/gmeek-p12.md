@@ -9,6 +9,7 @@ draft: false
 legacy_key: gmeek-p12
 legacy_host: blog.czyouge.xyz
 original_url: https://blog.czyouge.xyz/post/huan-xing.html
+canonical_url: https://www.czyouge.xyz/post/huan-xing.html
 description: 特别声明：本故事由虫子游戈与 Gemini 2.5 Pro 合作完成。
 discussion_url: https://github.com/czyouge/blog/issues/12
 ---
