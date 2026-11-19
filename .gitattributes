@@ -1,0 +1,2 @@
+# Windows launchers must use CRLF even when core.autocrlf is disabled.
+*.cmd text eol=crlf
