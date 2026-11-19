@@ -30,11 +30,11 @@
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header wrap">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="虫子游戈首页"><img class="brand-avatar" src="{{ "blog/avatar.png" | relURL }}" width="38" height="38" alt=""><span>{{ site.Title }}</span></a>
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="虫子游戈首页"><img class="brand-avatar" src="{{ "static/blog/avatar.png" | relURL }}" width="38" height="38" alt=""><span>{{ site.Title }}</span></a>
     <nav aria-label="主导航">{{ range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</nav>
     <div class="header-actions"><a class="search-link" href="{{ "/search/" | relURL }}" aria-label="搜索文章"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>搜索</span></a><button class="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">◐</button></div>
   </header>
   <main id="main" class="wrap">{{ block "main" . }}{{ end }}</main>
-  <footer class="site-footer wrap"><div><a href="{{ "/" | relURL }}">虫子游戈</a><p>一个讲故事的人类。</p></div><div class="footer-links"><a href="{{ "/post/myworks/" | relURL }}">作品</a><a href="{{ "/friends/" | relURL }}">友链</a><a href="{{ "/tags/" | relURL }}">标签</a><a href="{{ "/rss.xml" | relURL }}">RSS</a></div><p class="footer-note">© {{ now.Year }} 虫子游戈 · 以文字记录世界</p></footer>
+  <footer class="site-footer wrap"><div><a href="{{ "/" | relURL }}">虫子游戈</a><p>一个讲故事的人类。</p></div><div class="footer-links"><a href="{{ "/post/myworks/" | relURL }}">作品</a><a href="{{ "/friends/" | relURL }}">友链</a><a href="{{ "/tags/" | relURL }}">标签</a><a href="{{ "/rss.xml" | relURL }}">RSS</a></div><p class="footer-note">© {{ now.Year }} 虫子游戈 · Powered by Hugo & Codex</p></footer>
 </body>
 </html>
